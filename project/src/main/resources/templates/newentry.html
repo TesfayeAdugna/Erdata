@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Child Entry page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+    <div class="col">
+      <h1>New child Entry</h1>
+      <form method="POST" >
+        <div>
+          <label for="childName" class="form-label mt-2">Name</label>
+          <input type="text" class="form-control w-50" />
+        </div>
+        <div>
+            <label for="Age" class="form-label mt-2">Age</label>
+            <input type="text" class="form-control w-50"/>
+        </div>
+        <h3>Gender</h3>
+            <div>
+                <input id="boy" class="form-check form-check-input" type="checkbox" value="boy"/>
+                <label for="boy" class="form-check-label">Boy</label>
+                <input id="girl" class="form-check form-check-input " type="checkbox" value="girl"/>
+                <label for="girl" class="form-check-label">Girl</label>
+            </div>
+        <div>
+            <label for="address" class="form-label mt-2">Address</label>
+            <input type="text" class="form-control w-50" />
+        </div>
+        <div>
+            <label for="description" class="form-label mt-2">Description</label>
+            <textarea class="form-control w-50" name="description" id="description" rows="6"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+      </form>
+    </div>
+    <div class="col">
+        <h1>UPDATE</h1>
+        <div>
+            <label for="description" class="form-label mt-2">Description</label>
+            <textarea class="form-control w-50" name="description" id="description" rows="6" placeholder="write the helps the child got here..."></textarea>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  </body>
+</html>
