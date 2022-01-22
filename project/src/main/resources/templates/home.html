@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Child Entry page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Donate</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">About</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/}"><h1 style="margin-right: 1em;">Home</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Profile</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
+      </ul>
+    </header>
+      <h1>This is home page...</h1>
+      <div class="row row-cols-3">
+      <div class="col" th:each="entry : ${listentry}">
+      <div class="card" style="width: 18rem;">
+        <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
+        <div class="card-body">
+          <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
+          <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
+          <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+        </div>
+      </div>
+      </div>
+      </div>
+
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
