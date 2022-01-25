@@ -29,7 +29,7 @@ public class Newentry {
     private String bankaccount;
     @Column(nullable = true, length = 64)
     private String photos;
-    private String decription;
+    private String description;
     @Temporal(TemporalType.DATE)
     private Date registered_Date = new Date(System.currentTimeMillis());
 

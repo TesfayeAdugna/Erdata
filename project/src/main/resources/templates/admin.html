@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Child Entry page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Donate</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">About</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/}"><h1 style="margin-right: 1em;">Home</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Profile</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
+      </ul>
+    </header>
+<div class="container">
+    <h1>Suggested children List</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">No.</th>
+            <th scope="col">suggested by</th>
+            <th scope="col">Child Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Suggested Date</th>
+            <th scope="col">birth day</th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  th:each="suggest : ${listsuggest}">
+            <td scope="row" th:text="${suggest.id}"></td>
+            <td scope="row">Unknown</td>
+            <td th:text="${suggest.childname}">name</td>
+            <td th:text="${suggest.gender}">email</td>
+            <td th:text="${suggest.registered_Date}">subject</td>
+            <td th:text="${suggest.birthdate}">subject</td>
+            <td th:text="${suggest.description}">subject</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <footer>
+        <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/suggestion}"><h1 style="margin-right: 1em;">Suggestion</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}"><h1 style="margin-right: 1em;">Admin</h1></a></li>
+        </ul>
+      </footer>
+</body>
+</html>
