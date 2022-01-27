@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Taco Cloud</title>
+</head>
+
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+<body>
+<div class="container mx-auto w-50">
+    <h1>Register</h1>
+
+    <img th:src="@{/images/TacoCloud.png}" />
+
+    <form method="POST" th:action="@{/register}" id="registerForm">
+        <label class="form-label" for="username">Username: </label>
+        <input class="form-control" type="text" name="username" id="username" />
+
+        <label class="form-label" for="password">Password: </label>
+        <input
+                class="form-control"
+                type="password"
+                name="password"
+                id="password"
+        />
+
+        <label class="form-label" for="confirm">Confirm password: </label>
+        <input
+                class="form-control"
+                type="password"
+                name="confirm"
+                id="confirm"
+        />
+
+        <label class="form-label" for="firstname">Full name: </label>
+        <input class="form-control" type="text" name="firstname" id="firstname" />
+
+        <label class="form-label" for="middlename">Middle name: </label>
+        <input class="form-control" type="text" name="middlename" id="middlename" />
+
+        <label class="form-label" for="lastname">Last name: </label>
+        <input class="form-control" type="text" name="firstname" id="lastname" />
+
+        <label class="form-label" for="gender">Gender</label>
+        <input class="form-control" type="text" name="gender" id="gender" />
+
+        <label class="form-label" for="email">Full name: </label>
+        <input class="form-control" type="text" name="email" id="email" />
+
+        <label class="form-label" for="phone">Phone: </label>
+        <input class="form-control" type="text" name="phone" id="phone" />
+
+        <input class="btn btn-primary my-2" type="submit" value="Register" />
+    </form>
+</div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

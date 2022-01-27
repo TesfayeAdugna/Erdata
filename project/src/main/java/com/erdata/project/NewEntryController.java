@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
-public class NewentryController {
+public class NewEntryController {
     @Autowired
     private NewentryService service;
     @Autowired
@@ -28,7 +28,7 @@ public class NewentryController {
         return "home";
     }
     @GetMapping("/newentry")
-    public String newentry(Model model){
+    public String newe(Model model){
         model.addAttribute("entry", new Newentry());
         return "newentry";
     }
