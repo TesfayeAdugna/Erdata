@@ -7,6 +7,7 @@ body{
 .nav-item-additional:hover{
     background-color: rgb(255, 254, 254);
     opacity: 80%;
+    height: 3em;
 
 }
 .header{
@@ -17,11 +18,11 @@ body{
     background-color: aliceblue;
     opacity: 70%;
     position:fixed;
+    height: 3em;
     width: 100%;
 }
 .header-nav-img img{
-    width: 5em;
-    height: 5em;
+    height: 3em;
     
 }
 .nav-elements{
@@ -126,3 +127,33 @@ body{
     padding-top: 3em;
 }
 /*for suggestion*/
+/*for donate*/
+.donate-header{
+    text-align: center;
+    color: red;
+}
+.donate-info{
+    text-align: center;
+    color: white;
+}
+.bank-info{
+    text-align: center;
+    color: white;
+}
+.thank{
+    color: red;
+}
+.telebirr img{
+    width: 40%;
+}
+/*for donate*/
+/*for registration*/
+.registration-container{
+    background-color: white;
+}
+/*for registration*/
+/*for login*/
+.login-container{
+    background-color: white;
+}
+/*for login*/

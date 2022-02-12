@@ -36,32 +36,28 @@
   <div></div>
   </div>
     </header>
-<div class="container">
-    <h1>Suggested children List</h1>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">No.</th>
-            <th scope="col">suggested by</th>
-            <th scope="col">Child Name</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Suggested Date</th>
-            <th scope="col">birth day</th>
-            <th scope="col">Description</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr  th:each="suggest : ${listsuggest}">
-            <td scope="row" th:text="${suggest.id}"></td>
-            <td scope="row">Unknown</td>
-            <td th:text="${suggest.childname}">name</td>
-            <td th:text="${suggest.gender}">email</td>
-            <td th:text="${suggest.registered_Date}">subject</td>
-            <td th:text="${suggest.birthdate}">subject</td>
-            <td th:text="${suggest.description}">subject</td>
-        </tr>
-        </tbody>
-    </table>
+    <h1 class="donate-header">Thank you for your kindness</h1>
+    <h2 class="donate-info">We have arranged different ways to help you help the child.</h2>
+    <p class="donate-info">In order to help the child, you can use the bank accounts listed below</p>
+
+    <div class="bank-info">
+    <div class="cbe">
+        <h1>Commercial bank of Ethiopia</h1>
+        <h2>1000453672284645</h2>
+    </div>
+    <div class="oib">
+        <h1>Oromia International bank</h1>
+        <h2>1000453672284645</h2>
+    </div>
+    <div class="bib">
+        <h1>Buna International bank</h1>
+        <h2>1000453672284645</h2>
+    </div>
+    <div class="telebirr">
+        <h1>Use The following qrcode for Telebirr</h1>
+        <img th:src="@{/images/qrcode.png}" alt="Telebirr qrcode">
+    </div>
+    <h1 class="thank">Thank you!</h1>
 </div>
 
     <script th:src="@{/js/bootstrap.bundle.min.js}"></script>

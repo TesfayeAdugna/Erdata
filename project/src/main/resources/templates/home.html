@@ -11,9 +11,9 @@
     <header class="header">
       <nav class="header-nav">
       <ul class="nav">
-        <li class="header-nav-img"><img th:src="@{/images/handheart.png}" alt="hand heart"></li>
+        <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/handheart.png}" alt="hand heart"></a></li>
         <span class="nav justify-content-center nav-elements">
-        <li class="nav-item nav-item-additional"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Donate</h1></a></li>
+        <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/donate}"><h1 style="margin-right: 1em;">Donate</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/about}"><h1 style="margin-right: 1em;">About</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/}"><h1 style="margin-right: 1em;">Home</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/profile}"><h1 style="margin-right: 1em;">Profile</h1></a></li>
