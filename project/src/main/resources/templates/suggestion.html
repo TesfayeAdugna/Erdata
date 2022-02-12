@@ -70,6 +70,11 @@
             <input class="form-check-input" type="radio" th:field="*{gender}" th:value="Female" name="flexRadioDefault" id="flexRadioDefault2">
             <label class="form-check-label" for="flexRadioDefault2">Female</label>
           </div>
+          <div
+                  class="errors"
+                  th:if="${#fields.hasErrors('birthdate')}"
+                  th:errors="*{birthdate}"
+                ></div>
         </div>
         <div>
           <label for="birthdate" class="form-label mt-2">birthdate</label>
