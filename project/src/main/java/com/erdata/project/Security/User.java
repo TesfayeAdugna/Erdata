@@ -30,10 +30,17 @@ public class User extends Person implements UserDetails {
     private String username;
     private String password;
     private String phone;
+    private String role;
+
+    public boolean isAdmin(){
+        if (this.role == "ROLE_ADMIN") return true;
+        return false;
+    }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+        return Arrays.asList(new SimpleGrantedAuthority(this.role));
     }
 
     @Override

@@ -16,6 +16,7 @@ public class RegistrationForm{
     private String gender;
     private String address;
 
+
     User toUser(PasswordEncoder encoder) {
         User user = new User();
         user.setUsername(this.username);
@@ -26,6 +27,7 @@ public class RegistrationForm{
         user.setMiddleName(this.middleName);
         user.setLastName(this.lastName);
         user.setFirstName(this.firstName);
+        user.setRole("ROLE_USER");
         return user;
     }
 }
