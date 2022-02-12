@@ -2,10 +2,12 @@ package com.erdata.project;
 
 import java.io.IOException;
 import java.util.List;
-
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
+
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -33,7 +35,10 @@ public class ChildrenController {
         return "newentry";
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String sendContact(@ModelAttribute("entry") Children entry,  @RequestParam("image") MultipartFile multipartFile)throws IOException{
+    public String sendContact(@ModelAttribute("entry") @Valid Children entry, Errors errors, @RequestParam("image") MultipartFile multipartFile)throws IOException{
+        if (errors.hasErrors()) {
+            return "newentry";
+        }
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         entry.setPhotos(fileName);
         // entry.setUser(user);
