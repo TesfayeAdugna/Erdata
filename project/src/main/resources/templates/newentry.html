@@ -30,7 +30,7 @@
     </header>
     <div class="container">
     <div class="row">
-    <div class="col">
+    <div class="col first-col">
       <h1>New child Entry</h1>
       <form th:action="@{/save}" th:object="${entry}" method="POST" enctype="multipart/form-data">
         <div>
@@ -79,7 +79,7 @@
         <button type="submit" class="btn btn-primary mt-2">Submit</button>
       </form>
     </div>
-    <div class="col">
+    <div class="col second-col">
         <h1>UPDATE</h1>
         <div>
             <label for="description" class="form-label mt-2">Description</label>

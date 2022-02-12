@@ -83,4 +83,16 @@ body{
     padding-right: 5em;
 }
 /*for profile page body*/
-
+/*for newentry body*/
+.first-col{
+    background-color: white;
+    margin: 2em;
+    padding: 3em;
+}
+.second-col{
+    background-color: white;
+    margin: 2em;
+    height: fit-content;
+    padding: 3em;
+}
+/*for newentry body*/
