@@ -15,31 +15,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
-public class NewEntryController {
+public class ChildrenController {
     @Autowired
-    private NewentryService service;
+    private ChildrenService service;
     @Autowired
-    private NewentryRepository repo;
+    private ChildrenRepository repo;
     @GetMapping("/")
     public String home(Model model){
-        List<Newentry> listentry = service.listAll();
+        List<Children> listentry = service.listAll();
         model.addAttribute("listentry", listentry);
         System.out.print("Get /");
         return "home";
     }
     @GetMapping("/newentry")
     public String newe(Model model){
-        model.addAttribute("entry", new Newentry());
+        model.addAttribute("entry", new Children());
         return "newentry";
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String sendContact(@ModelAttribute("entry") Newentry entry,  @RequestParam("image") MultipartFile multipartFile)throws IOException{
+    public String sendContact(@ModelAttribute("entry") Children entry,  @RequestParam("image") MultipartFile multipartFile)throws IOException{
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         entry.setPhotos(fileName);
         // entry.setUser(user);
 
 
-        Newentry savedItems = repo.save(entry);
+        Children savedItems = repo.save(entry);
 
         String uploadDir = "user-photos/" + savedItems.getId();
 

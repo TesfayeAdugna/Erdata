@@ -15,7 +15,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Newentry {
+public class Children {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
