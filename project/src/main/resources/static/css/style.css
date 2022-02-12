@@ -1,0 +1,40 @@
+/*for the whole body*/
+body{
+    background-color: rgb(5, 5, 105);
+}
+/*for the whole body*/
+/*for header part*/
+.nav-item-additional:hover{
+    background-color: rgb(255, 254, 254);
+    opacity: 100%;
+
+}
+.header{
+    background-image: url(../images/headerbackground.jpg);
+    height: 23em;
+    width: 100%;
+}
+.header-nav{
+    background-color: aliceblue;
+    opacity: 90%;
+    position:fixed;
+    width: 100%;
+}
+.header-nav-img img{
+    width: 5em;
+    height: 5em;
+    
+}
+.nav-elements{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*for header part*/
+.child{
+    background-color: white;
+    margin: 4em;
+    border-radius: 6px;
+}
+.child img{
+    border-radius: 6px;
+}
