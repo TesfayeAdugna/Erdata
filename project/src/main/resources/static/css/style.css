@@ -10,7 +10,6 @@ body{
 
 }
 .header{
-    background-image: url(../images/headerbackground.jpg);
     height: 23em;
     width: 100%;
 }
@@ -77,6 +76,27 @@ body{
     color: #fff;
     text-align: left;
 }
+#sub{
+    display:grid ;
+    grid-template-columns: 30% 70%;
+    height: 140%;
+    border-radius: 50px;
+}
+.b1{
+    background-image: url(../images/baby3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.b2{
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    background-image: url(../images/wow6.jpg);
+    color: #fff;
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+
+}
 /*for about page body*/
 /*for profile page body*/
 .profile-body-element{
@@ -96,3 +116,13 @@ body{
     padding: 3em;
 }
 /*for newentry body*/
+/*for suggestion*/
+.main-container{
+    background-color: white;
+    width: 60%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 5em;
+    padding-top: 3em;
+}
+/*for suggestion*/

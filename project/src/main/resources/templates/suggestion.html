@@ -23,17 +23,31 @@
         <li class="nav-item nav-item-additional"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Donate</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/about}"><h1 style="margin-right: 1em;">About</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/}"><h1 style="margin-right: 1em;">Home</h1></a></li>
-        <li class="nav-item nav-item-additional"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Profile</h1></a></li>
+        <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/profile}"><h1 style="margin-right: 1em;">Profile</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
       </span>
       </ul>
     </nav>
+    <div id="sub">
+      <div class="b1"></div>
+      <div class="b2">
+          <div></div>
+          <div><big><p><b> Let's all stand together and
+              lift our children from where they fell. <br>
+              Let us give them hope because they are our future tomorrow. <br>
+              let us give them strength because they will be our 
+              strength when we are tired <br>
+              let us give them love because they are our children!</big></div>
+      </p></b>
+  </div>
+  <div></div>
+  </div>
     </header>
-    <main class="container">
+    <main class="container main-container">
         <form th:action="@{/send}" th:object="${suggest}" method="POST">
             <div>
                 <label for="childName" class="form-label mt-2">Name</label>
-                <input type="text" th:field="*{childname}" class="form-control w-50" />
+                <input type="text" th:field="*{childname}" class="form-control" />
             </div>
             <h3>Gender</h3>
         <div>
@@ -48,11 +62,11 @@
         </div>
         <div>
           <label for="birthdate" class="form-label mt-2">birthdate</label>
-          <input type="text" th:field="*{birthdate}" class="date form-control" style="width: 200px" />
+          <input type="text" th:field="*{birthdate}" class="date form-control"/>
         </div>
         <div>
           <label for="description" class="form-label mt-2">Description</label>
-          <textarea class="form-control w-50" th:field="*{description}" name="description" id="description" rows="6"></textarea>
+          <textarea class="form-control" th:field="*{description}" name="description" id="description" rows="6"></textarea>
       </div>
         <button type="submit" class="btn btn-primary mt-2">Submit</button>
         </form>
