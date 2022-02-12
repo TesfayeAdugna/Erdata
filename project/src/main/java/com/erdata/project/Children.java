@@ -21,19 +21,20 @@ public class Children {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    @NotEmpty(message="this value is required")
+    @NotEmpty(message="first name is required")
     private String firstname;
     private String middlename;
     private String lastname;
-    @NotEmpty(message="this value is required")
+    @NotEmpty(message="Birthdate is required")
     private String birthdate;
+    @NotEmpty(message="Gender is required")
     private String gender;
-    @NotEmpty(message="this value is required")
+    @NotEmpty(message="Address is required")
     private String address;
     private String bankaccount;
     @Column(nullable = true, length = 64)
     private String photos;
-    @NotEmpty(message="this value is required")
+    @NotEmpty(message="atleast one sentence information  is required")
     private String description;
     @Temporal(TemporalType.DATE)
     private Date registered_Date = new Date(System.currentTimeMillis());
