@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.Data;
 
@@ -19,8 +20,11 @@ public class Suggestion {
     private Long id;
     @Temporal(TemporalType.DATE)
     private Date registered_Date = new Date(System.currentTimeMillis());
+    @NotEmpty(message="this value is required")
     private String childname;
     private String gender;
+    @NotEmpty(message="this value is required")
     private String birthdate;
+    @NotEmpty(message="this value is required")
     private String description;
 }

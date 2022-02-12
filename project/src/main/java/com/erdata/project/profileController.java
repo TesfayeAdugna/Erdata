@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class profileController {
     @Autowired
-    private NewentryService service;
+    private ChildrenService service;
     @GetMapping("/profile")
     public String displayprofile(Model model){
-        List<Newentry> listentry = service.listAll();
+        List<Children> listentry = service.listAll();
         model.addAttribute("listentry", listentry);
         return "profile";
     }

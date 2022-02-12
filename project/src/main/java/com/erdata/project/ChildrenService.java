@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class NewentryService {
+public class ChildrenService {
     @Autowired
-    private NewentryRepository repo;
+    private ChildrenRepository repo;
 
-    public List<Newentry>listAll(){
+    public List<Children>listAll(){
         return repo.findAll();
     }
-    public void save(Newentry entry){
+    public void save(Children entry){
         repo.save(entry);
     }
     

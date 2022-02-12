@@ -2,6 +2,9 @@ package com.erdata.project;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
+import org.springframework.validation.Errors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class SuggestionController {
+public class SuggestionController{
     @Autowired
     private SuggestionService service;
     @GetMapping("/admin")
@@ -28,7 +31,10 @@ public class SuggestionController {
     }
 
     @RequestMapping(value = "/send", method = RequestMethod.POST)
-    public String suggestions(@ModelAttribute("suggest") Suggestion suggestion){
+    public String suggestions(@ModelAttribute("suggest") @Valid Suggestion suggestion, Errors errors){
+        if (errors.hasErrors()) {
+            return "suggestion";
+        }
         service.save(suggestion);
         return "redirect:/";
     }

@@ -12,7 +12,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
             <!-- for birthdate -->
+    <style>
+    .errors{
+      color: red;
+    }
+  </style>
   </head>
   <body>
     <header class="header">
@@ -48,6 +54,11 @@
             <div>
                 <label for="childName" class="form-label mt-2">Name</label>
                 <input type="text" th:field="*{childname}" class="form-control" />
+                <div
+                  class="errors"
+                  th:if="${#fields.hasErrors('childname')}"
+                  th:errors="*{childname}"
+                ></div>
             </div>
             <h3>Gender</h3>
         <div>
@@ -63,10 +74,20 @@
         <div>
           <label for="birthdate" class="form-label mt-2">birthdate</label>
           <input type="text" th:field="*{birthdate}" class="date form-control"/>
+          <div
+                  class="errors"
+                  th:if="${#fields.hasErrors('birthdate')}"
+                  th:errors="*{birthdate}"
+                ></div>
         </div>
         <div>
           <label for="description" class="form-label mt-2">Description</label>
           <textarea class="form-control" th:field="*{description}" name="description" id="description" rows="6"></textarea>
+          <div
+                  class="errors"
+                  th:if="${#fields.hasErrors('description')}"
+                  th:errors="*{description}"
+                ></div>
       </div>
         <button type="submit" class="btn btn-primary mt-2">Submit</button>
         </form>
