@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header-nav">
+        <ul class="nav">
+          <li class="header-nav-img"><img th:src="@{/images/handheart.png}" alt="hand heart"></li>
+          <span class="nav justify-content-center nav-elements">
+          <li class="nav-item nav-item-additional"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Donate</h1></a></li>
+          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/about}"><h1 style="margin-right: 1em;">About</h1></a></li>
+          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/}"><h1 style="margin-right: 1em;">Home</h1></a></li>
+          <li class="nav-item nav-item-additional"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Profile</h1></a></li>
+          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
+        </span>
+        </ul>
+      </nav>
+      </header>
+
+          <div class="row row-cols-3 profile-body-element">
+            <div class="col" th:each="entry : ${listentry}">
+            <div class="child" style="width: 36rem;">
+              <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
+              <div class="card-body">
+                <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
+                <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
+                <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+                <button type="button" class="btn btn-outline-info">See more...</button>
+              </div>
+            </div>
+            </div>
+            </div>
+
+      <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+      <footer>
+        <div id="hd"><h1>Erdata</h1>
+          <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="navbar-brand" th:href="@{/suggestion}"><h1 style="margin-right: 1em;">Suggestion</h1></a></li>
+            <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}"><h1 style="margin-right: 1em;">Admin</h1></a></li>
+            </ul>
+        </div>
+      </footer>
+</body>
+</html>

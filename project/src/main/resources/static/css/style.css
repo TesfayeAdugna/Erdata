@@ -1,12 +1,12 @@
 /*for the whole body*/
 body{
-    background-color: rgb(5, 5, 105);
+    background-color: rgb(1, 1, 75);
 }
 /*for the whole body*/
 /*for header part*/
 .nav-item-additional:hover{
     background-color: rgb(255, 254, 254);
-    opacity: 100%;
+    opacity: 80%;
 
 }
 .header{
@@ -16,7 +16,7 @@ body{
 }
 .header-nav{
     background-color: aliceblue;
-    opacity: 90%;
+    opacity: 70%;
     position:fixed;
     width: 100%;
 }
@@ -30,11 +30,57 @@ body{
     margin-right: auto;
 }
 /*for header part*/
+/*for home page body*/
 .child{
-    background-color: white;
+    color: white;
     margin: 4em;
     border-radius: 6px;
 }
 .child img{
     border-radius: 6px;
 }
+.welcome{
+    color: white;
+    padding: 5em;
+}
+.welcome-header{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+.welcome-message{
+    font-size: 1.5em;
+}
+.welcome-image img{
+    height: 60%;
+    padding: 2em;
+}
+.home-body-elements{
+    margin-top: -23em;
+    padding-right: 5em;
+}
+/*for home page body*/
+/*for about page body*/
+.about{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+.about h1{
+    color: red;
+}
+#hd{
+    background-image: url(../images/wow3.jpg);
+    padding: 70px;
+    height: 20em;
+    background-size: 100% 100%;
+    color: #fff;
+    text-align: left;
+}
+/*for about page body*/
+/*for profile page body*/
+.profile-body-element{
+    padding-right: 5em;
+}
+/*for profile page body*/
+

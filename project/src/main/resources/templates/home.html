@@ -16,21 +16,31 @@
         <li class="nav-item nav-item-additional"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Donate</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/about}"><h1 style="margin-right: 1em;">About</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/}"><h1 style="margin-right: 1em;">Home</h1></a></li>
-        <li class="nav-item nav-item-additional"><a class="navbar-brand" href="#"><h1 style="margin-right: 1em;">Profile</h1></a></li>
+        <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/profile}"><h1 style="margin-right: 1em;">Profile</h1></a></li>
         <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
       </span>
       </ul>
     </nav>
     </header>
-      <h1>This is home page...</h1>
-      <div class="row row-cols-3">
+      <div class="row">
+        <div class="col welcome">
+          <h1 class="welcome-header">WELCOME</h1>
+          <p class="welcome-message">The General Objective of this website is to simplify the helping method for the helpers. Its goal is to help children who do not have food, shelter, education, and so on to get help. The built system will ease the method of helping helpers across the world. This website shows the children’s photo with full description so that the
+            helpers can simply click children's photo and get the children list.</p>
+        </div>
+        <div class="col welcome-image">
+          <img th:src="@{/images/homebeauty.jpg}" alt="home beauty picture">
+        </div>
+      </div>
+      <div class="row row-cols-3 home-body-elements">
       <div class="col" th:each="entry : ${listentry}">
-      <div class="child" style="width: 24rem;">
+      <div class="child" style="width: 36rem;">
         <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
         <div class="card-body">
           <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
           <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
           <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+          <button type="button" class="btn btn-outline-info">See more...</button>
         </div>
       </div>
       </div>
@@ -38,10 +48,12 @@
 
   <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
   <footer>
-    <ul class="nav justify-content-center">
-    <li class="nav-item"><a class="navbar-brand" th:href="@{/suggestion}"><h1 style="margin-right: 1em;">Suggestion</h1></a></li>
-    <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}"><h1 style="margin-right: 1em;">Admin</h1></a></li>
-    </ul>
+    <div id="hd"><h1>Erdata</h1>
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/suggestion}"><h1 style="margin-right: 1em;">Suggestion</h1></a></li>
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}"><h1 style="margin-right: 1em;">Admin</h1></a></li>
+        </ul>
+    </div>
   </footer>
 </body>
 </html>
