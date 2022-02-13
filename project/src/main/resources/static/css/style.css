@@ -1,28 +1,36 @@
 /*for the whole body*/
 body{
-    background-color: rgb(1, 1, 75);
+    background-image: url("../images/wow6.jpg");
+    background-attachment: fixed;
 }
 /*for the whole body*/
 /*for header part*/
+.nav-item-additional{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
 .nav-item-additional:hover{
-    background-color: rgb(255, 254, 254);
-    opacity: 80%;
-    height: 3em;
-
+    transition-duration: 200ms;
+    transform-origin: 0em;
+    color: white;
+    border-bottom: 2px solid red;
+    background-color: rgb(53, 53, 53);
+    height: 4em;
 }
 .header{
     height: 23em;
     width: 100%;
 }
 .header-nav{
-    background-color: aliceblue;
-    opacity: 70%;
+    background-color: rgb(0, 0, 0);
     position:fixed;
-    height: 3em;
+    height: 4em;
     width: 100%;
 }
 .header-nav-img img{
-    height: 3em;
+    height: 4em;
+    background-color: white;
     
 }
 .nav-elements{
@@ -49,14 +57,13 @@ body{
     font-weight: bold;
 }
 .welcome-message{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 .welcome-image img{
-    height: 60%;
+    height: 50%;
     padding: 2em;
 }
 .home-body-elements{
-    margin-top: -23em;
     padding-right: 5em;
 }
 /*for home page body*/
@@ -69,22 +76,14 @@ body{
 .about h1{
     color: red;
 }
-#hd{
-    background-image: url(../images/wow3.jpg);
-    padding: 70px;
-    height: 20em;
-    background-size: 100% 100%;
-    color: #fff;
-    text-align: left;
-}
 #sub{
     display:grid ;
-    grid-template-columns: 30% 70%;
-    height: 140%;
+    grid-template-columns: 20% 80%;
+    height: 80%;
     border-radius: 50px;
 }
 .b1{
-    background-image: url(../images/baby3.jpg);
+    background-image: url(../images/logo.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -93,12 +92,25 @@ body{
     grid-template-rows: 30% 30% 30%;
     background-image: url(../images/wow6.jpg);
     color: #fff;
-    padding: 15px;
+    padding: 50px 15px 2px 15px;
     align-items: center;
     text-align: center;
 
 }
 /*for about page body*/
+/*for footer*/
+#hd{
+    background-image: url(../images/wow3.jpg);
+    padding: 70px;
+    height: 20em;
+    background-size: 100% 100%;
+    color: #fff;
+    text-align: left;
+}
+.footer-link{
+    color: white;
+}
+/*for footer*/
 /*for profile page body*/
 .profile-body-element{
     padding-right: 5em;

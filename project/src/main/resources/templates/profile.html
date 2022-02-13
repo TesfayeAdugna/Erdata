@@ -10,15 +10,15 @@
 </head>
 <body>
     <header class="header">
-        <nav class="header-nav">
+      <nav class="header-nav">
         <ul class="nav">
-          <li class="header-nav-img"><img th:src="@{/images/handheart.png}" alt="hand heart"></li>
+          <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/handheart.png}" alt="hand heart"></a></li>
           <span class="nav justify-content-center nav-elements">
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/donate}"><h1 style="margin-right: 1em;">Donate</h1></a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/about}"><h1 style="margin-right: 1em;">About</h1></a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/}"><h1 style="margin-right: 1em;">Home</h1></a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/profile}"><h1 style="margin-right: 1em;">Profile</h1></a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Profile</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggestion</a></li>
         </span>
         </ul>
       </nav>
@@ -56,7 +56,7 @@
       <footer>
         <div id="hd"><h1>Erdata</h1>
           <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="navbar-brand" th:href="@{/suggestion}"><h1 style="margin-right: 1em;">Suggestion</h1></a></li>
+            <li class="nav-item"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
             <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}"><h1 style="margin-right: 1em;">Admin</h1></a></li>
             </ul>
         </div>
