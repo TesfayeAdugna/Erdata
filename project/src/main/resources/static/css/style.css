@@ -1,13 +1,6 @@
-/*for the whole body*/
-body{
-    background-image: url("../images/wow6.jpg");
-    background-attachment: fixed;
-}
-/*for the whole body*/
 /*for header part*/
 .nav-item-additional{
     font-size: 1.5em;
-    font-weight: bold;
     color: white;
 }
 .nav-item-additional:hover{
@@ -58,6 +51,7 @@ body{
 }
 .welcome-message{
     font-size: 1em;
+    color: black;
 }
 .welcome-image img{
     height: 50%;
@@ -69,7 +63,6 @@ body{
 /*for home page body*/
 /*for about page body*/
 .about{
-    color: white;
     font-size: 1.5em;
     text-align: center;
 }
@@ -90,8 +83,7 @@ body{
 .b2{
     display: grid;
     grid-template-rows: 30% 30% 30%;
-    /* background-image: url(../images/wow6.jpg); */
-    background-color: rgb(251, 125, 79,0.4);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 50px 15px 2px 15px;
     align-items: center;
@@ -147,17 +139,15 @@ body{
 }
 .donate-info{
     text-align: center;
-    color: white;
 }
 .bank-info{
     text-align: center;
-    color: white;
 }
 .thank{
     color: red;
 }
 .telebirr img{
-    width: 40%;
+    width: 30%;
 }
 /*for donate*/
 /*for registration*/
