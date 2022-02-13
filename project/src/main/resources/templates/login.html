@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Taco Cloud</title>
+  <title>Login to Erdata</title>
   <!-- Bootstrap core CSS -->
   <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
   <link rel="stylesheet" th:href="@{/css/style.css}">
@@ -39,9 +39,7 @@
   <h1>Login</h1>
   <img th:src="@{/images/TacoCloud.png}" />
 
-  <div th:if="${error}">
-    Unable to login. Check your username and password.
-  </div>
+  <div class="" th:if="${errorMessage}" th:text="${errorMessage}">errorMessage</div>
 
   <p>New here? Click <a th:href="@{/register}">here</a> to register.</p>
   <form method="POST" th:action="@{/login}">

@@ -37,7 +37,7 @@ public class SecurityConfig {
                 .antMatchers("/", "/**").permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/login")
+                .loginPage("/login").failureUrl("/login-error")
                 .defaultSuccessUrl("/")
                 .and()
                 .logout()
