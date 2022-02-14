@@ -17,10 +17,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SuggestionController{
     @Autowired
     private SuggestionService service;
+
+
+    @Autowired
+    private ChildrenService services;
+
+    
     @GetMapping("/admin")
     public String suggested(Model model) {
         List<Suggestion> listsuggest = service.listAll();
         model.addAttribute("listsuggest", listsuggest);
+
+        List<Children> listentry = services.listAll();
+        model.addAttribute("listentry", listentry);
+
         System.out.print("Get /");
         return "admin";
     }
