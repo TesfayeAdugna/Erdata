@@ -33,9 +33,9 @@
                 <div class="mb-3 pb-4">
                 <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%">
                 <div class="card-body">
-                  <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
+                  <p class="card-text"> <span>Name: </span><span th:text="${entry.firstName}"> </span> <span  th:text="${entry.middleName}"></span> </p>
                   <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
-                  <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+                  <p class="card-text"> <span>Address: </span><span th:text="${entry.address.city}"></span> </p>
                   <a class="btn btn-outline-info" th:href="@{'/donateach/'+ ${entry.id}}" role="button">Donate</a>
                 </div>
               </div>
@@ -48,7 +48,7 @@
               <img th:src="@{${listentry.photosImagePath}}" class="card-img-top" alt="child image">
             </div>
             <div class="col children-description">
-              <p class="card-text"> <span  th:text="${listentry.firstname}"></span> <span  th:text="${listentry.middlename}"></span> is born on <span th:text="${listentry.birthdate}"></span> at <span th:text="${listentry.address}"></span>. <br /> <span th:text="${listentry.description}"></span> </p>
+              <p class="card-text"> <span  th:text="${listentry.firstName}"></span> <span  th:text="${listentry.middleName}"></span> is born on <span th:text="${listentry.birthdate}"></span> at <span th:text="${listentry.address.city}"></span>. <br /> <span th:text="${listentry.description}"></span> </p>
             </div>
           </div>
           <div class="row qoutes">

@@ -13,10 +13,9 @@
         <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo4.jpg}" alt="hand heart"></a></li>
         
         <div class="center">
-          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
-
+        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
+        <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/about}">About</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
       
@@ -24,10 +23,10 @@
     
       </ul>
     </nav>
+   
   </header>
 <main class="form-signin mx-auto w-50 login-container">
   <h1>Login</h1>
-  <img th:src="@{/images/TacoCloud.png}" />
 
   <h5 class="text-danger" th:if="${errorMessage}" th:text="${errorMessage}">errorMessage</h5>
 
