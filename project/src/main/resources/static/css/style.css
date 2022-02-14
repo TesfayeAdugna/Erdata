@@ -11,7 +11,7 @@
 .nav-item-additional:hover{
     transition-duration: 200ms;
     transform-origin: 0em;
-    color: coral;
+    color: rgb(252, 252, 252);
     border-bottom: 2px solid coral;
     border-top: 2px solid coral;
     
