@@ -21,13 +21,22 @@
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/profile}">Children list</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
-        
+          
       </div>
       
         </ul>
       </nav>
       
       </header>
+      <nav class="navbar navbar-light">
+        <div class="container-fluid">
+              <a class="navbar-brand"></a>
+              <form class="d-flex" style="margin-top:2%; padding-right:5em">
+              <input class="form-control me-2" type="text" name = "keyword" placeholder="Search by Name" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+      </nav>
 
           <div class="row row-cols-3 profile-body-element">
             <div class="col" th:each="entry : ${listentry}">
