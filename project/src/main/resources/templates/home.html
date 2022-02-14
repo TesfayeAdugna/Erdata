@@ -101,7 +101,7 @@
       <div class="row row-cols-3 child">
       <div class="col" th:each="entry : ${listentry}">
         <div class="mb-3 pb-4">
-        <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%">
+        <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%" height="250rem">
         <div class="card-body">
           <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
           <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>

@@ -93,9 +93,13 @@
     font-family: cursive;
 }
 
-
+/*for profile page*/
 .profile-body-element{
     padding-right: 5em;
+}
+.child-profile{
+    margin-top: 10em;
+    padding: 3em;
 }
 /*for profile page body*/
 /*for newentry body*/
