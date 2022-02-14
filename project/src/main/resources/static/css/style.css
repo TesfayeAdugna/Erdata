@@ -1,7 +1,11 @@
 /*for header part*/
 .nav-item-additional{
-    font-size: 1.5em;
+    font-size: 1em;
     color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav{
+    width: 100%;
 }
 .nav-item-additional:hover{
     transition-duration: 200ms;
@@ -11,12 +15,23 @@
     background-color: rgb(53, 53, 53);
     height: 4em;
 }
+.center{
+    margin:auto;
+    width: 60%;
+    margin-left: 10%;
+}
+   
+.nav-item{
+    display: inline;
+    align-items: center;
+    margin: 1%;
+}
 .header{
     height: 23em;
     width: 100%;
 }
 .header-nav{
-    background-color: rgb(0, 0, 0,0.7);
+    background-color: rgb(0, 0, 0);
     position:fixed;
     height: 4em;
     width: 100%;

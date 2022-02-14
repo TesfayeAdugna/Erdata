@@ -6,19 +6,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{/css/style.css}">
+  
   </head>
   <body>
     <header class="header">
       <nav class="header-nav">
       <ul class="nav">
         <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo2.jpg}" alt="hand heart"></a></li>
-        <span class="nav justify-content-center nav-elements">
+        
+        <div class="center">
+        
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Profile</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
-      </span>
+      
+    </div>
+    
       </ul>
     </nav>
     <div id="sub">
@@ -39,7 +44,7 @@
     <main>
       <div class="row">
         <div class="col welcome">
-          <h1 class="welcome-header">WELCOME</h1>
+          <div class="welcome-header">WELCOME</div>
           <p class="welcome-message">The General Objective of this website is to simplify the helping method for the helpers. Its goal is to help children who do not have food, shelter, education, and so on to get help. The built system will ease the method of helping helpers across the world. This website shows the children’s photo with full description so that the
             helpers can simply click children's photo and get the children list.</p>
         </div>
