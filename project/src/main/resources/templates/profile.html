@@ -19,29 +19,17 @@
 
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
-          <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/profile}">Profile</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/profile}">Children list</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
         
       </div>
       
         </ul>
       </nav>
-      <div id="sub">
-        <div class="b1"></div>
-        <div class="b2">
-            <div></div>
-            <div><big><p><b> Let's all stand together and
-                lift our children from where they fell. <br>
-                Let us give them hope because they are our future tomorrow. <br>
-                let us give them strength because they will be our 
-                strength when we are tired <br>
-                let us give them love because they are our children!</big></div>
-        </p></b>
-    </div>
-    <div></div>
-    </div>
+      
       </header>
 
+<<<<<<< HEAD
           <div class="row row-cols-3 profile-body-element">
             <div class="col" th:each="entry : ${listentry}">
             <div class="child" style="width: 36rem;">
@@ -51,10 +39,21 @@
                 <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
                 <p class="card-text"> <span>Address: </span><span th:text="${entry.address.city}"></span> </p>
                 <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
+=======
+      <div class="row row-cols-4 child-profile">
+        <div class="col" th:each="entry : ${listentry}">
+          <div class="mb-3 pb-4">
+          <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%" height="250rem">
+          <div class="card-body">
+            <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
+            <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
+            <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+            <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
+          </div>
         </div>
-            </div>
-            </div>
-            </div>
+        </div>
+>>>>>>> 220a16d6b321a0608edc40a86b708213210c230e
+        </div>
 
       <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
       <footer>

@@ -26,14 +26,12 @@
           </ul>
           </nav>
     </header>
-    <h1 class="donate-header">Thank you for your kindness</h1>
-    <h2 class="donate-info">We have arranged different ways to help you help the child.</h2>
-    <p class="donate-info">In order to help the child, you can use the bank accounts listed below</p>
-
-    <div class="bank-info">
+    <div class="bank-info" th:each="entry : ${listentry}">
+        <h1 class="donate-header">Thank you for your kindness</h1>
+        <h2 class="donate-info">You can use one of the following ways to help <span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </h2>
     <div class="cbe">
         <h1>Commercial bank of Ethiopia</h1>
-        <h2>1000453672284645</h2>
+        <h2 th:text="${entry.bankaccount}">1000453672284645</h2>
     </div>
     <div class="oib">
         <h1>Oromia International bank</h1>
