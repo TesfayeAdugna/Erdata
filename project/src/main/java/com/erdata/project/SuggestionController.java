@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -20,6 +21,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SuggestionController{
     @Autowired
     private SuggestionService service;
+ 
+    @Autowired
+    private SuggestionRepository repo;
 
 
     @Autowired
@@ -52,4 +56,13 @@ public class SuggestionController{
         service.save(suggestion);
         return "redirect:/";
     }
+
+    @GetMapping("/erase/{id}")
+    public String eraseSuggestion(@PathVariable("id") long id, Model model) {
+        Suggestion suggest = repo.findById(id).get();
+          
+        repo.delete(suggest);
+        return "redirect:/admin";
+    }
+
 }

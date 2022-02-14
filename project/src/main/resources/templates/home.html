@@ -7,6 +7,10 @@
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{/css/style.css}">
   <style>
+    .dande:hover{
+        background-color: coral;
+        color: white;
+    }
   @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -106,7 +110,7 @@
           <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
           <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
           <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
-          <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
+          <a class="dande" th:href="@{'/seemore/'+ ${entry.id}}" role="button" style="text-decoration: none; border: 1px solid coral; padding: 2%; border-radius: 5px; color: coral;" >See more...</a>
         </div>
       </div>
       </div>
