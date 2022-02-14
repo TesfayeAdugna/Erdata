@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import lombok.RequiredArgsConstructor;
 
 import javax.validation.Valid;
@@ -22,23 +21,24 @@ public class RegistrationController {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-
     @GetMapping
     public String registerForm(Model model) {
-        model.addAttribute("form", new RegistrationForm());
+        model.addAttribute("form", new User());
         return "registration";
     }
 
     @PostMapping
-    public String processRegistration(@Valid @ModelAttribute("form") RegistrationForm form, Errors errors, BindingResult bind) {
-
-        if (userRepository.findByUsername(form.getUsername()) != null){
+    public String processRegistration(@Valid @ModelAttribute("form") User user, Errors errors, BindingResult bind) {
+        if (userRepository.findByUsername(user.getUsername()) != null){
             bind.addError( new FieldError("form","username","User name already exist"));
         }
         if (errors.hasErrors()) {
             return "registration";
         }
-        userRepository.save(form.toUser(passwordEncoder));
+        String rawPassword = user.getPassword();
+        user.setPassword(passwordEncoder.encode(rawPassword));
+        user.setRole("ROLE_USER");
+        userRepository.save(user);
         return "redirect:/login";
     }
 }

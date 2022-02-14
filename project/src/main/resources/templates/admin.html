@@ -70,13 +70,14 @@
 
         <tr th:each="entry : ${listentry}">
           <td th:text="${entry.id}"></td>
-          <td th:text="${entry.firstname}"></td>
-          <td th:text="${entry.middlename}"></td>
-          <td th:text="${entry.lastname}"></td>
+          <td th:text="${entry.firstName}"></td>
+          <td th:text="${entry.middleName}"></td>
+          <td th:text="${entry.lastName}"></td>
           <td th:text="${entry.birthdate}"></td>
           <td th:text="${entry.gender}"></td>
-          <td th:text="${entry.bankaccount}"></td>
-          <td th:text="${entry.address}"></td>
+          <td th:text="${entry.bankAccount.bankName}"></td>
+          <td th:text="${entry.bankAccount.accountNumber}"></td>
+          <td th:text="${entry.address.city}"></td>
           <td th:text="${entry.description}"></td>
           <td><a th:href="@{'/edit/'+ ${entry.id}}" class="btn btn-success btn-xs"> Edit</a></td>
           <!-- <td><a th:href="'@/delete/'+ ${entry.id}" th:field="${child.id}"class="btn btn-danger btn-xs bg-red">Delete</a></td> -->

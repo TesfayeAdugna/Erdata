@@ -4,6 +4,7 @@ import java.beans.Transient;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,31 +13,19 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotEmpty;
 
+import com.erdata.project.Security.Person;
+
 import org.hibernate.validator.constraints.Length;
 
 import lombok.Data;
 
 @Data
 @Entity
-public class Children {
-
+public class Children extends Person{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    @NotEmpty(message="first name is required")
-    @Length(min = 3,max = 16, message = "name must be between 3-16 character")
-    private String firstname;
-    private String middlename;
-    @NotEmpty(message="first name is required")
-    @Length(min = 3,max = 16, message = "name must be between 3-16 character")
-    private String lastname;
-    @NotEmpty(message="Birthdate is required")
     private String birthdate;
-    @NotEmpty(message="Gender is required")
-    private String gender;
-    @NotEmpty(message="Address is required")
-    private String address;
-    private String bankaccount;
     @Column(nullable = true, length = 64)
     private String photos;
     @NotEmpty(message="atleast one sentence information  is required")
@@ -45,6 +34,9 @@ public class Children {
     @Temporal(TemporalType.DATE)
     private Date registered_Date = new Date(System.currentTimeMillis());
 
+    @Embedded
+    private BankAccount bankAccount; 
+
     @Transient
     public String getPhotosImagePath() {
         if (photos == null || id == null) return null;
@@ -52,3 +44,7 @@ public class Children {
         return "/user-photos/" + id + "/" + photos;
     }
 }
+
+// @NotEmpty(message="Address is required")
+    // private String address;
+    // private String bankaccount;

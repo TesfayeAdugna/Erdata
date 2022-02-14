@@ -47,9 +47,9 @@
             <div class="child" style="width: 36rem;">
               <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
               <div class="card-body">
-                <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
+                <p class="card-text"> <span>Name: </span><span th:text="${entry.firstName}"> </span> <span  th:text="${entry.middleName}"></span> </p>
                 <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
-                <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+                <p class="card-text"> <span>Address: </span><span th:text="${entry.address.city}"></span> </p>
                 <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
         </div>
             </div>

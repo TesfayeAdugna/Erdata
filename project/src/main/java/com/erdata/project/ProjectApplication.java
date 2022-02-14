@@ -25,7 +25,7 @@ public class ProjectApplication {
 				user.setPassword(passwordEncoder.encode("UGR/3281/12"));
 				user.setFirstName("Teshome");
 				user.setLastName("Nbret");
-				user.setAddress("Dc");
+				user.setGender("male");
 				user.setPhone("0932255228");
 				user.setRole("ROLE_ADMIN");
 				userRepository.save(user);

@@ -58,23 +58,23 @@
       <form th:action="@{/save}" th:object="${entry}" method="POST" enctype="multipart/form-data">
         <div>
           <label for="childName" class="form-label mt-2">Name</label>
-          <input type="text" th:field="*{firstname}" class="form-control w-50" />
+          <input type="text" th:field="*{firstName}" class="form-control w-50" />
         </div>
         <div
         class="errors"
-        th:if="${#fields.hasErrors('firstname')}"
+        th:if="${#fields.hasErrors('firstName')}"
         th:errors="*{firstname}"
       ></div>
         <div>
           <label for="middleName" class="form-label mt-2">Middle Name</label>
-          <input type="text" th:field="*{middlename}" class="form-control w-50" />
+          <input type="text" th:field="*{middleName}" class="form-control w-50" />
         </div>
         <div>
           <label for="lastName" class="form-label mt-2">Last Name</label>
-          <input type="text" th:field="*{lastname}" class="form-control w-50" />
+          <input type="text" th:field="*{lastName}" class="form-control w-50" />
         </div>
         <div>
-          <label for="birthdate" class="form-label mt-2">birthdate</label>
+          <label for="birthdate" class="form-label mt-2">Birthdate</label>
           <input type="text" th:field="*{birthdate}" class="date form-control" style="width: 200px" />
           <div
           class="errors"
@@ -98,15 +98,80 @@
           th:errors="*{gender}"
         ></div>
         </div>
-        <div>
-            <label for="address" class="form-label mt-2">Address</label>
-            <input type="text" th:field="*{address}" class="form-control w-50" />
 
-        </div>
-        <div>
-          <label for="address" class="form-label mt-2">Bank Account</label>
-          <input type="text" th:field="*{bankaccount}" class="form-control w-50" />
-      </div>
+        <!-- Address -->
+        <label for="kebele">Kebele</label>
+        <input
+        th:class="|form-control ${#fields.hasErrors('address.kebele')? 'is-invalid': 'is-valid'}|"
+        type="text"
+        th:field="*{address.kebele}"
+        id="kebele"
+/>
+        
+        <div
+            class="invalid-feedback"
+            th:if="${#fields.hasErrors('address.kebele')}"
+            th:errors="*{address.kebele}">
+        </div><br>
+
+        <label for="city">City</label>
+    <input
+    th:class="|form-control ${#fields.hasErrors('address.city')? 'is-invalid': 'is-valid'}|"
+    type="text"
+    th:field="*{address.city}"
+    id="city"
+/>
+    
+    <div
+        class="invalid-feedback"
+        th:if="${#fields.hasErrors('address.city')}"
+        th:errors="*{address.city}">
+    </div><br>
+
+    <label for="region">Region</label>
+    <input
+    th:class="|form-control ${#fields.hasErrors('address.region')? 'is-invalid': 'is-valid'}|"
+    type="text"
+    th:field="*{address.region}"
+    id="region"
+/>
+    
+    <div
+        class="invalid-feedback"
+        th:if="${#fields.hasErrors('address.region')}"
+        th:errors="*{address.region}">
+    </div><br>
+          <!-- Address -->
+
+          <!-- bank account -->
+          <label for="bankName">Bank Name</label>
+          <input
+          th:class="|form-control ${#fields.hasErrors('bankAccount.bankName')? 'is-invalid': 'is-valid'}|"
+          type="text"
+          th:field="*{bankAccount.bankName}"
+          id="bankName"
+      />
+          
+          <div
+              class="invalid-feedback"
+              th:if="${#fields.hasErrors('bankAccount.bankName')}"
+              th:errors="*{bankAccount.bankName}">
+          </div><br>
+
+          <label for="accountNumber">Bank Account Number</label>
+          <input
+          th:class="|form-control ${#fields.hasErrors('bankAccount.accountNumber')? 'is-invalid': 'is-valid'}|"
+          type="text"
+          th:field="*{bankAccount.accountNumber}"
+          id="accountNumber"
+      />
+          
+          <div
+              class="invalid-feedback"
+              th:if="${#fields.hasErrors('bankAccount.accountNumber')}"
+              th:errors="*{bankAccount.accountNumber}">
+          </div><br>
+       <!-- bank account -->
       <div class="mb-3">
         <label for="formFile" class="form-label">Upload photo</label>
         <input class="form-control" type="file" name="image" accept="image/png, image/jpeg" id="formFile">
