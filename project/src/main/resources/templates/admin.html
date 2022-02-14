@@ -78,7 +78,7 @@
           <td th:text="${entry.bankaccount}"></td>
           <td th:text="${entry.address}"></td>
           <td th:text="${entry.description}"></td>
-          <td><a th:href="@{/listentry/edit{id}(id=${entry.id})}" class="btn btn-success btn-xs"> Edit</a></td>
+          <td><a th:href="@{'/edit/'+ ${entry.id}}" class="btn btn-success btn-xs"> Edit</a></td>
           <!-- <td><a th:href="'@/delete/'+ ${entry.id}" th:field="${child.id}"class="btn btn-danger btn-xs bg-red">Delete</a></td> -->
         </tr>
       </tbody>
@@ -102,13 +102,13 @@
       </thead>
       <tbody>
         <tr th:each="suggest : ${listsuggest}">
-          <td scope="row" th:text="${suggest.id}"></td>
-          <td scope="row">Unknown</td>
+          <td scope="row" th:text="${suggest.id}">id</td>
+          <td scope="row" th:text="${suggest.user.username}">suggested by</td>
           <td th:text="${suggest.childname}">name</td>
-          <td th:text="${suggest.gender}">email</td>
-          <td th:text="${suggest.registered_Date}">subject</td>
-          <td th:text="${suggest.birthdate}">subject</td>
-          <td th:text="${suggest.description}">subject</td>
+          <td th:text="${suggest.gender}">Gender</td>
+          <td th:text="${suggest.registered_Date}">Suggested Date</td>
+          <td th:text="${suggest.birthdate}">birth day</td>
+          <td th:text="${suggest.description}">Description</td>
         </tr>
       </tbody>
     </table>

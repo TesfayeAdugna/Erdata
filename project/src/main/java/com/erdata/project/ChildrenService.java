@@ -19,9 +19,8 @@ public class ChildrenService {
     public List<Children> getByKeyword(String keyword){
         return repo.findByKeyword(keyword);
        }
-    public Children find(Long id){
-        Children child = repo.getById(id);
-        return child;
+    public Children get(Long id){
+       return repo.findById(id).get();
     }
     
 }

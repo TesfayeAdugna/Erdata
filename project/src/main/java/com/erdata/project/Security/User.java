@@ -3,12 +3,17 @@ package com.erdata.project.Security;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.erdata.project.Suggestion;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -31,6 +36,8 @@ public class User extends Person implements UserDetails {
     private String password;
     private String phone;
     private String role;
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    private List<Suggestion>suggestionChild;
 
     public boolean isAdmin(){
         if (this.role == "ROLE_ADMIN") return true;

@@ -6,9 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotEmpty;
+
+import com.erdata.project.Security.User;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -32,4 +36,8 @@ public class Suggestion {
     @NotEmpty(message="atleast one sentence information  is required")
     @Length(min=15, max = 200, message = "write description with 15 - 200 characters")
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 }
