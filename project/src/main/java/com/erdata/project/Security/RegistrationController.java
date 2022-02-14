@@ -32,6 +32,9 @@ public class RegistrationController {
         if (userRepository.findByUsername(user.getUsername()) != null){
             bind.addError( new FieldError("form","username","User name already exist"));
         }
+        if (userRepository.findByEmail(user.getEmail()) != null){
+            bind.addError( new FieldError("form","email","This email is used"));
+        }
         if (errors.hasErrors()) {
             return "registration";
         }
