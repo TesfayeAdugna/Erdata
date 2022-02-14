@@ -109,13 +109,8 @@
         <div class="card-body">
           <p class="card-text"> <span>Name: </span><span th:text="${entry.firstName}"> </span> <span  th:text="${entry.middleName}"></span> </p>
           <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
-<<<<<<< HEAD
           <p class="card-text"> <span>Address: </span><span th:text="${entry.address.city}"></span> </p>
           <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
-=======
-          <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
-          <a class="dande" th:href="@{'/seemore/'+ ${entry.id}}" role="button" style="text-decoration: none; border: 1px solid coral; padding: 2%; border-radius: 5px; color: coral;" >See more...</a>
->>>>>>> 220a16d6b321a0608edc40a86b708213210c230e
         </div>
       </div>
       </div>

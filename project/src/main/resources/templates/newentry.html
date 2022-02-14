@@ -25,10 +25,9 @@
           <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo4.jpg}" alt="hand heart"></a></li>
           
           <div class="center">
-            <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
-
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
-          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/about}">About</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
         
@@ -36,12 +35,14 @@
       
         </ul>
       </nav>
+     
     </header>
     <div class="container">
     <div class="row">
     <div class="col first-col">
       <h1>New child Entry</h1>
       <form th:action="@{/save}" th:object="${entry}" method="POST" enctype="multipart/form-data">
+       
         <div>
           <label for="childName" class="form-label mt-2">Name</label>
           <input type="text" th:field="*{firstName}" class="form-control w-50" />
@@ -171,6 +172,7 @@
           th:errors="*{description}"
         ></div>
         </div>
+
         <button type="submit" class="btn btn-primary mt-2">Submit</button>
       </form>
     </div>

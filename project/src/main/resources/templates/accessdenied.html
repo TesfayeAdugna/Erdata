@@ -2,30 +2,29 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
-    <title>Home page</title>
+    <title>About page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{/css/style.css}">
-  
   </head>
   <body>
     <header class="header">
       <nav class="header-nav">
-      <ul class="nav">
-        <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo2.jpg}" alt="hand heart"></a></li>
+        <ul class="nav">
+          <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo4.jpg}" alt="hand heart"></a></li>
+          
+          <div class="center">
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/about}">About</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
         
-        <div class="center">
-        
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
+      </div>
       
-    </div>
-    
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+     
     </header>
     <main>
         <div><h2 class="text-danger my-5" th:if="${errorMessage}" th:text="${errorMessage}">errorMessage</h2></div>
