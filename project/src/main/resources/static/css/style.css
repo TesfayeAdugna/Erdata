@@ -1,8 +1,8 @@
 /*for header part*/
 .nav-item-additional{
     font-size: 1em;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+    color: coral;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .nav{
     width: 100%;
@@ -11,8 +11,18 @@
     transition-duration: 200ms;
     transform-origin: 0em;
     color: white;
-    border-bottom: 2px solid red;
-    background-color: rgb(53, 53, 53);
+    border-bottom: 2px solid coral;
+    border-top: 2px solid coral;
+    
+    height: 4em;
+}
+.active{
+    transition-duration: 200ms;
+    transform-origin: 0em;
+    color: coral;
+    border-bottom: 2px solid coral;
+    border-top: 2px solid coral;
+    
     height: 4em;
 }
 .center{
@@ -38,7 +48,7 @@
 .header-nav-img img{
     height: 4em;
     background-color: white;
-    
+    margin-left: 25%;
 }
 .nav-elements{
     margin-left: auto;

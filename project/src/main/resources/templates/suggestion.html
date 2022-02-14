@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
+    
     <title>Child Entry page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
@@ -23,15 +24,15 @@
     <header class="header">
       <nav class="header-nav">
         <ul class="nav">
-          <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo2.jpg}" alt="hand heart"></a></li>
+          <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo4.jpg}" alt="hand heart"></a></li>
           
           <div class="center">
-          
+            <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
+
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
-          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Profile</a></li>
-          <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/suggestion}">Suggest</a></li>
         
       </div>
       
@@ -108,12 +109,7 @@
       });
     </script>
       <footer>
-        <div id="hd"><h1>Erdata</h1>
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
-            <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}"><h1 style="margin-right: 1em;">Admin</h1></a></li>
-            </ul>
-        </div>
+      <p>&copy;copy right Addis Ababa</p>
       </footer>
 </body>
 </html>
