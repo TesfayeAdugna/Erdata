@@ -157,3 +157,30 @@
     background-color: white;
 }
 /*for login*/
+/*see more*/
+.children-image img{
+    margin-top: 4em;
+    border-radius: 100%;
+    background-color: black;
+}
+.children-description{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.seemore-erdata{
+    width: fit-content;
+    font-family: 'Brush Script MT', cursive;
+    margin: 20% 0 20% 0;
+}
+.quote{
+    float: left;
+    width: 60%;
+    border-right: 3px solid black;
+}
+.seemore-quote{
+    width: 30%;
+    float: right;
+}
+/*see more*/
