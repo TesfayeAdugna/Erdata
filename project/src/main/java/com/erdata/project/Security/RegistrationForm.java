@@ -8,13 +8,14 @@ import lombok.Data;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Data
 public class RegistrationForm{
     @NotNull
-    @Size(min = 3, message = "Username must contain at least 3 characters")
+    @Length(min=3, max = 16, message = "Username must contain between 3-16 characters")
     private String username;
     @NotNull
     @Size(min = 5, message = "Password must contain at least 5 characters")
@@ -23,16 +24,16 @@ public class RegistrationForm{
     @Digits(integer = 10, fraction = 0, message = "Phone number must be digits.")
     private String phone;
     @NotNull
-    @Size(min = 3, message = "First name must contain at least 3 characters")
+    @Length(min = 3, max = 16, message = "First name must contain between 3-16 characters")
     private String firstName;
 
     private String middleName;
     @NotNull
-    @Size(min = 3, message = "Last name must contain at least 3 characters")
+    @Length(min = 3, max = 16, message = "Last name must contain between 3-16 characters")
     private String lastName;
     @NotBlank(message = "Please choose gender")
     private String gender;
-    @NotBlank(message = "Address must not be blank.")
+    @Size(min=2, message = "Address must not be blank.")
     private String address;
 
 

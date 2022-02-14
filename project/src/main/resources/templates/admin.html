@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
   <title>Child Entry page</title>
@@ -13,23 +13,13 @@
   <header class="header">
     <nav class="header-nav">
       <ul class="nav">
-        <li class="header-nav-img"><img th:src="@{/images/handheart.png}" alt="hand heart"></li>
+        <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo2.jpg}" alt="hand heart"></a></li>
         <span class="nav justify-content-center nav-elements">
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/donate}">
-              <h1 style="margin-right: 1em;">Donate</h1>
-            </a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/about}">
-              <h1 style="margin-right: 1em;">About</h1>
-            </a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/}">
-              <h1 style="margin-right: 1em;">Home</h1>
-            </a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/profile}">
-              <h1 style="margin-right: 1em;">Profile</h1>
-            </a></li>
-          <li class="nav-item nav-item-additional"><a class="navbar-brand" th:href="@{/newentry}">
-              <h1 style="margin-right: 1em;">New Entry</h1>
-            </a></li>
+          <li class="nav-item"><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
+          <li class="nav-item"><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
+          <li class="nav-item"><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
+          <li class="nav-item"><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Profile</a></li>
+          <li class="nav-item"><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
         </span>
       </ul>
     </nav>
@@ -50,83 +40,83 @@
       <div></div>
     </div>
   </header>
+  <div class="container" >
+    <button type="button" class="btn btn-primary"><a style="color: white; text-decoration: none;"
+        th:href="@{/newentry}">Add children</a></button>
 
-  <main style="color: azure;">
-    <a th:href="@{/newentry}">Add children</a>
-    <div class="container">
-      <p>Registered children List</p>
-      <table class="table" style="color: wheat; border: 1px solid black;"  >
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">firstname</th>
-            <th scope="col">secondname</th>
-            <th scope="col">lastname</th>
-            <th scope="col">birthdate</th>
-            <th scope="col">gender</th>
-            <th scope="col">bankaccount</th>
-            <th scope="col">address</th>
-            <!-- <th scope="col">photo</th> -->
-            <th scope="col">description</th> 
-            <!-- <th scope="col">registration_date</th>          -->
-  
-          </tr>
-        </thead>
-        <tbody>
-        
-          <tr th:each="entry : ${listentry}">
-            <td th:text="${entry.id}"></td>
-            <td th:text="${entry.firstname}"></td>
-            <td th:text="${entry.middlename}"></td>
-            <td th:text="${entry.lastname}"></td>
-            <td th:text="${entry.birthdate}"></td>
-            <td th:text="${entry.gender}"></td>
-            <td th:text="${entry.bankaccount}"></td>
-            <td th:text="${entry.address}"></td>
-            <td th:text="${entry.description}"></td>
-            <!-- <td><a th:href="/editchildprofile " th:field="${entry.id}" class="btn btn-success btn-xs"> Edit</a></td>
-            <td><a th:href="{'@/delete/'+ ${entry.id} }" th:field="${child.id}"class="btn btn-danger btn-xs bg-red">Delete</a></td> -->
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  
-    <div class="container">
-      <p>Suggested children List</p>
-      <table class="table" style="color: white;">
-        <thead>
-          <tr>
-            <th scope="col">No.</th>
-            <th scope="col">suggested by</th>
-            <th scope="col">Child Name</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Suggested Date</th>
-            <th scope="col">birth day</th>
-            <th scope="col">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr th:each="suggest : ${listsuggest}">
-            <td scope="row" th:text="${suggest.id}"></td>
-            <td scope="row">Unknown</td>
-            <td th:text="${suggest.childname}">name</td>
-            <td th:text="${suggest.gender}">email</td>
-            <td th:text="${suggest.registered_Date}">subject</td>
-            <td th:text="${suggest.birthdate}">subject</td>
-            <td th:text="${suggest.description}">subject</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
+    <p>Registered children List</p>
+    <table class="table" style=" border: 1px solid black;">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">firstname</th>
+          <th scope="col">secondname</th>
+          <th scope="col">lastname</th>
+          <th scope="col">birthdate</th>
+          <th scope="col">gender</th>
+          <th scope="col">bankaccount</th>
+          <th scope="col">address</th>
+          <!-- <th scope="col">photo</th> -->
+          <th scope="col">description</th>
+          <!-- <th scope="col">registration_date</th>          -->
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr th:each="entry : ${listentry}">
+          <td th:text="${entry.id}"></td>
+          <td th:text="${entry.firstname}"></td>
+          <td th:text="${entry.middlename}"></td>
+          <td th:text="${entry.lastname}"></td>
+          <td th:text="${entry.birthdate}"></td>
+          <td th:text="${entry.gender}"></td>
+          <td th:text="${entry.bankaccount}"></td>
+          <td th:text="${entry.address}"></td>
+          <td th:text="${entry.description}"></td>
+          <td><a th:href="@{/listentry/edit{id}(id=${entry.id})}" class="btn btn-success btn-xs"> Edit</a></td>
+          <!-- <td><a th:href="'@/delete/'+ ${entry.id}" th:field="${child.id}"class="btn btn-danger btn-xs bg-red">Delete</a></td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="container" >
+    <h1>Suggested children List</h1>
+    <table class="table" >
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">suggested by</th>
+          <th scope="col">Child Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Suggested Date</th>
+          <th scope="col">birth day</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="suggest : ${listsuggest}">
+          <td scope="row" th:text="${suggest.id}"></td>
+          <td scope="row">Unknown</td>
+          <td th:text="${suggest.childname}">name</td>
+          <td th:text="${suggest.gender}">email</td>
+          <td th:text="${suggest.registered_Date}">subject</td>
+          <td th:text="${suggest.birthdate}">subject</td>
+          <td th:text="${suggest.description}">subject</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
   <footer>
     <div id="hd">
       <h1>Erdata</h1>
       <ul class="nav justify-content-center">
-        <li class="nav-item"><a class="navbar-brand" th:href="@{/suggestion}">
-            <h1 style="margin-right: 1em;">Suggestion</h1>
+        <li class="nav-item"><a class="navbar-brand" th:href="@{/newentry}">
+            <h1 style="margin-right: 1em;">New Entry</h1>
           </a></li>
         <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}">
             <h1 style="margin-right: 1em;">Admin</h1>
