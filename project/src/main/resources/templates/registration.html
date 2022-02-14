@@ -9,63 +9,26 @@
 
 
 <body>
-<<<<<<< HEAD
   <header class="header">
     <nav class="header-nav">
-      <ul class="nav">
-        <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo4.jpg}" alt="hand heart"></a></li>
-        
-        <div class="center">
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/about}">About</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
-      
-    </div>
-    
-      </ul>
-    </nav>
-   
+    <ul class="nav">
+      <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo4.jpg}" alt="hand heart"></a></li>
+    <div class="center">
+      <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}" >Home</a></li>
+      <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
+      <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
+      <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
+      <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
+  </div>
+    </ul>
+  </nav>
   </header>
-=======
-<header class="header">
-    <nav class="header-nav">
-        <ul class="nav">
-            <li class="header-nav-img"><a th:href="@{/}"><img th:src="@{/images/logo4.jpg}" alt="hand heart"></a></li>
-
-            <div class="center">
-                <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/}">Home</a></li>
-
-                <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
-                <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
-                <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
-                <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
-
-            </div>
-
-        </ul>
-    </nav>
-    <<<<<<< HEAD
-    <div class="b2">
-        <div><big><p><b> Let's all stand together and
-            lift our children from where they fell. <br>
-            Let us give them hope because they are our future tomorrow. <br>
-            let us give them strength because they will be our
-            strength when we are tired <br>
-            let us give them love because they are our children!</b></big></div>
-        </p></b>
-    </div>
-    =======
-    >>>>>>> 220a16d6b321a0608edc40a86b708213210c230e
-</header>
->>>>>>> bea88b583cf48d5a59c0167404dba063b39c4ee1
 <div class="container mx-auto w-50 registration-container">
     <h1>Register</h1>
 
-    <img th:src="@{/images/TacoCloud.png}" />
+    <!-- <img th:src="@{/images/TacoCloud.png}" /> -->
 
-    <form method="POST" action="#" th:action="@{/register}" th:object="${form}" id="registerForm">
+    <form method="POST" th:action="@{/register}" th:object="${form}" id="registerForm">
         <div>
             <label class="form-label" for="username">Username: </label>
             <input th:class="|form-control ${#fields.hasErrors('username')? 'is-invalid': 'is-valid'}|"
@@ -167,7 +130,7 @@
         </div><br>
 
         <!-- sgfhsgjfgsf -->
-
+<!--
         <label for="house-number">House Number</label>
         <input
                 th:class="|form-control ${#fields.hasErrors('address.houseNumber')? 'is-invalid': 'is-valid'}|"
@@ -181,7 +144,6 @@
                 th:if="${#fields.hasErrors('address.houseNumber')}"
                 th:errors="*{address.houseNumber}">
         </div><br>
-        <!-- hh -->
 
         <label for="kebele">Kebele</label>
         <input
@@ -197,9 +159,6 @@
                 th:errors="*{address.kebele}">
         </div><br>
 
-        <!-- hh -->
-        <!-- hh -->
-
         <label for="city">City</label>
         <input
                 th:class="|form-control ${#fields.hasErrors('address.city')? 'is-invalid': 'is-valid'}|"
@@ -213,10 +172,6 @@
                 th:if="${#fields.hasErrors('address.city')}"
                 th:errors="*{address.city}">
         </div><br>
-
-        <!-- hh -->
-
-        <!-- hh -->
 
         <label for="region">Region</label>
         <input
@@ -232,9 +187,6 @@
                 th:errors="*{address.region}">
         </div><br>
 
-        <!-- hh -->
-        <!-- hh -->
-
         <label for="country">Country</label>
         <input
                 th:class="|form-control ${#fields.hasErrors('address.country')? 'is-invalid': 'is-valid'}|"
@@ -248,7 +200,7 @@
                 th:if="${#fields.hasErrors('address.country')}"
                 th:errors="*{address.country}">
         </div><br>
-
+      -->
         <!-- hh -->
 
         <!-- fgjseghdrghdg -->

@@ -28,8 +28,7 @@ public class ProjectApplication {
 				user.setGender("male");
 				user.setPhone("0932255228");
 				user.setRole("ROLE_ADMIN");
-				user.setEmail("endal@gmai.lco");
-
+				user.setEmail("endale@gmail.com");
 				userRepository.save(user);
 			}};}
 
