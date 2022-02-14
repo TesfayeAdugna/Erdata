@@ -19,7 +19,7 @@
 
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
-          <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/profile}">Profile</a></li>
+          <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/profile}">Children list</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
         
       </div>
@@ -42,19 +42,19 @@
     </div>
       </header>
 
-          <div class="row row-cols-3 profile-body-element">
-            <div class="col" th:each="entry : ${listentry}">
-            <div class="child" style="width: 36rem;">
-              <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
-              <div class="card-body">
-                <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
-                <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
-                <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
-                <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
+      <div class="row row-cols-4 child">
+        <div class="col" th:each="entry : ${listentry}">
+          <div class="mb-3 pb-4">
+          <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%">
+          <div class="card-body">
+            <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
+            <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
+            <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+            <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
+          </div>
         </div>
-            </div>
-            </div>
-            </div>
+        </div>
+        </div>
 
       <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
       <footer>

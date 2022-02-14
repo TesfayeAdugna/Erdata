@@ -19,17 +19,14 @@
 
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
-        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Profile</a></li>
+        <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
       
     </div>
     
       </ul>
     </nav>
-    <div id="sub">
-      <div class="b1"></div>
       <div class="b2">
-          <div></div>
           <div><big><p><b> Let's all stand together and
               lift our children from where they fell. <br>
               Let us give them hope because they are our future tomorrow. <br>
@@ -37,8 +34,6 @@
               strength when we are tired <br>
               let us give them love because they are our children!</big></div>
       </p></b>
-  </div>
-  <div></div>
   </div>
     </header>
     <main>
@@ -49,13 +44,13 @@
             helpers can simply click children's photo and get the children list.</p>
         </div>
         <div class="col welcome-image">
-          <img th:src="@{/images/homebeauty.jpg}" alt="home beauty picture">
+          <img th:src="@{/images/homebeauty.jpg}" alt="home beauty picture" width="250rem">
         </div>
       </div>
-      <div class="row row-cols-3 home-body-elements">
+      <div class="row row-cols-3 child">
       <div class="col" th:each="entry : ${listentry}">
-      <div class="child" style="width: 36rem;">
-        <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
+        <div class="mb-3 pb-4">
+        <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%">
         <div class="card-body">
           <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
           <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
