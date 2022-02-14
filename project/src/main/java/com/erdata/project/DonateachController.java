@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-public class seemoreController {
+public class DonateachController {
     @Autowired
     private ChildrenService service;
-    @GetMapping("/seemore/{id}")
+    @GetMapping("/donateach/{id}")
     public String displayseemore(@PathVariable(name = "id") Long id, Model model){
         Children listentry = service.get(id);
         model.addAttribute("listentry", listentry);
-        return "seemore";
+        return "donateach";
     }
 }

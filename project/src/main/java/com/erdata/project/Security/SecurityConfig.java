@@ -32,7 +32,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeRequests()
-                .antMatchers("/newentry").hasRole("ADMIN")
+                .antMatchers("/newentry","/admin").hasRole("ADMIN")
                 .antMatchers("/suggestion", "/orders/*").hasRole("USER")
                 .antMatchers("/", "/**").permitAll()
                 .and()
@@ -42,6 +42,7 @@ public class SecurityConfig {
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
+                .and().exceptionHandling().accessDeniedPage("/accessdenied")
                 .and()
                 .build();
     }
