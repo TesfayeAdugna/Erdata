@@ -16,5 +16,12 @@ public class ChildrenService {
     public void save(Children entry){
         repo.save(entry);
     }
+    public List<Children> getByKeyword(String keyword){
+        return repo.findByKeyword(keyword);
+       }
+    public Children find(Long id){
+        Children child = repo.getById(id);
+        return child;
+    }
     
 }

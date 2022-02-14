@@ -50,8 +50,8 @@
                 <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
                 <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
                 <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
-                <button type="button" class="btn btn-outline-info">See more...</button>
-              </div>
+                <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
+        </div>
             </div>
             </div>
             </div>
