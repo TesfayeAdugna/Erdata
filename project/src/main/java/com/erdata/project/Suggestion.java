@@ -22,6 +22,7 @@ public class Suggestion {
     private Date registered_Date = new Date(System.currentTimeMillis());
     @NotEmpty(message="this value is required")
     private String childname;
+    @NotEmpty(message="this value is required")
     private String gender;
     @NotEmpty(message="this value is required")
     private String birthdate;

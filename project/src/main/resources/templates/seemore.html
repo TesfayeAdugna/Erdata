@@ -38,19 +38,28 @@
     </div>
       </header>
 
-          <div class="row row-cols-3 profile-body-element">
-            <div class="col" th:each="entry : ${listentry}">
-            <div class="child" style="width: 36rem;">
-              <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
-              <div class="card-body">
-                <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
-                <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
-                <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
-                <button type="button" class="btn btn-outline-info">See more...</button>
-              </div>
-            </div>
-            </div>
-            </div>
+
+      <div class="row">
+          <div class="col-4">
+            <div class="row profile-body-element">
+                <div class="col" th:each="entry : ${listentry}">
+                <div class="child" style="width: 90%;">
+                  <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image" >
+                  <div class="card-body">
+                    <p class="card-text"> <span>Name: </span><span th:text="${entry.firstname}"> </span> <span  th:text="${entry.middlename}"></span> </p>
+                    <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
+                    <p class="card-text"> <span>Address: </span><span th:text="${entry.address}"></span> </p>
+                    <button type="button" class="btn btn-outline-info">See more...</button>
+                  </div>
+                </div>
+                </div>
+                </div>
+          </div>
+          <div class="col-8">
+              hellos of the second column
+          </div>
+      </div>
+
 
       <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
       <footer>
