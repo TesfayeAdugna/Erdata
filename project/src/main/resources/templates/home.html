@@ -6,9 +6,44 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{/css/style.css}">
+  <style>
+  @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+  #anime{
+    font-family: cursive;
+    font-size: xx-large;
+    color: coral;
+  }
+  .typed-out {
+    overflow: hidden;
+  border-right: .15em solid coral;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  width: 0;
+  animation: 
+    typing 4s steps(50, end) forwards;
+  animation-iteration-count: infinite;
+}
+.AnimeC {
+  display: inline-block;
+}
+@media only screen and (max-width: 900px) {
+  #welcome {
+    display: flex;
+    flex-direction: column;
+
+  }
+  #discription{
+    margin: 5%;
   
+  }
+}
+</style>
   </head>
-  <body>
+  <body style="background-color: rgb(199, 206, 212);">
     <header class="header">
       <nav class="header-nav">
       <ul class="nav">
@@ -21,12 +56,10 @@
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Profile</a></li>
         <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
-      
     </div>
-    
       </ul>
     </nav>
-    <div id="sub">
+    <!-- <div id="sub">
       <div class="b1"></div>
       <div class="b2">
           <div></div>
@@ -39,17 +72,33 @@
       </p></b>
   </div>
   <div></div>
-  </div>
+  </div> -->
     </header>
-    <main>
-      <div class="row">
-        <div class="col welcome">
-          <div class="welcome-header">WELCOME</div>
-          <p class="welcome-message">The General Objective of this website is to simplify the helping method for the helpers. Its goal is to help children who do not have food, shelter, education, and so on to get help. The built system will ease the method of helping helpers across the world. This website shows the children’s photo with full description so that the
-            helpers can simply click children's photo and get the children list.</p>
+    <main >
+      <div class="row" id="welcome" >
+        <div class="col" id="discription" style=" margin: 7%;  margin-right: 5%; background-color: rgb(97, 95, 95); border-radius: 50px; padding: 5%; color: rgb(255, 254, 254);" >
+          <div class="AnimeC">
+            <div class="typed-out" id="anime">  WELCOME TO ERDATA           |</div>
+          </div>
+          <br><br><br>
+          <p class="card-text">
+            Let's all stand together and
+              lift our children from where they fell. <br>
+              Let us give them hope because they are our future tomorrow. <br>
+              let us give them strength because they will be our 
+              strength when we are tired <br>
+              let us give them love because they are our children!
+                 <br><br>you can get children lists <a href="">here</a>.   
+          </p>
         </div>
-        <div class="col welcome-image">
-          <img th:src="@{/images/homebeauty.jpg}" alt="home beauty picture">
+        <div class="col" style="padding-top:8%;  ">
+          <img
+            width="70%"
+            height="75%"
+            src="images/children2.jpg"
+            alt=""
+            style="border-radius:10px; box-shadow: inset;"
+          />
         </div>
       </div>
       <div class="row row-cols-3 home-body-elements">
@@ -68,13 +117,13 @@
     </main>
 
   <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-  <footer>
-    <div id="hd"><h1>Erdata</h1>
-      <ul class="nav justify-content-center">
-        <li class="nav-item"><a class="navbar-brand" th:href="@{/newentry}"><h1 style="margin-right: 1em;">New Entry</h1></a></li>
-        <li class="nav-item"><a class="navbar-brand" th:href="@{/admin}"><h1 style="margin-right: 1em;">Admin</h1></a></li>
-        </ul>
+  <footer >
+    
+    <div class="text-center">
+      <p>&copy;copy right Addis Ababa</p>
     </div>
+      
+    
   </footer>
 </body>
 </html>
