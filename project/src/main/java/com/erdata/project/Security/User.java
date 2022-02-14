@@ -12,9 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 import com.erdata.project.Suggestion;
 
@@ -37,6 +35,9 @@ public class User extends Person implements UserDetails {
     @NotNull
     @Length(min=3, max = 16, message = "Username must contain between 3-16 characters")
     private String username;
+    @NotBlank
+    @Email(message = "Please enter a valid e-mail address")
+    private String email;
     @NotNull
     @Size(min = 5, message = "Password must contain at least 5 characters")
     private String password;
