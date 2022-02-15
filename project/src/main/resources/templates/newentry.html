@@ -42,7 +42,7 @@
     </header>
     <div class="container">
     <div class="row">
-    <div class="col first-col">
+    <div class="first-col">
       <h1>New child Entry</h1>
       <form th:action="@{/save}" th:object="${entry}" method="POST" enctype="multipart/form-data">
        
@@ -53,7 +53,7 @@
         <div
         class="errors"
         th:if="${#fields.hasErrors('firstName')}"
-        th:errors="*{firstname}"
+        th:errors="*{firstName}"
       ></div>
         <div>
           <label for="middleName" class="form-label mt-2">Middle Name</label>
@@ -62,10 +62,15 @@
         <div>
           <label for="lastName" class="form-label mt-2">Last Name</label>
           <input type="text" th:field="*{lastName}" class="form-control w-50" />
+          <div
+          class="errors"
+          th:if="${#fields.hasErrors('lastName')}"
+          th:errors="*{lastName}"
+        ></div>
         </div>
         <div>
           <label for="birthdate" class="form-label mt-2">Birthdate</label>
-          <input type="text" th:field="*{birthdate}" class="date form-control" style="width: 200px" />
+          <input type="text" th:field="*{birthdate}" class="date form-control w-50"/>
           <div
           class="errors"
           th:if="${#fields.hasErrors('birthdate')}"
@@ -92,7 +97,7 @@
         <!-- Address -->
         <label for="kebele">Kebele</label>
         <input
-        th:class="|form-control ${#fields.hasErrors('address.kebele')? 'is-invalid': 'is-valid'}|"
+        th:class="|form-control w-50 ${#fields.hasErrors('address.kebele')? 'is-invalid': 'is-valid'}|"
         type="text"
         th:field="*{address.kebele}"
         id="kebele"
@@ -106,7 +111,7 @@
 
         <label for="city">City</label>
     <input
-    th:class="|form-control ${#fields.hasErrors('address.city')? 'is-invalid': 'is-valid'}|"
+    th:class="|form-control w-50 ${#fields.hasErrors('address.city')? 'is-invalid': 'is-valid'}|"
     type="text"
     th:field="*{address.city}"
     id="city"
@@ -120,7 +125,7 @@
 
     <label for="region">Region</label>
     <input
-    th:class="|form-control ${#fields.hasErrors('address.region')? 'is-invalid': 'is-valid'}|"
+    th:class="|form-control w-50 ${#fields.hasErrors('address.region')? 'is-invalid': 'is-valid'}|"
     type="text"
     th:field="*{address.region}"
     id="region"
@@ -136,7 +141,7 @@
           <!-- bank account -->
           <label for="bankName">Bank Name</label>
           <input
-          th:class="|form-control ${#fields.hasErrors('bankAccount.bankName')? 'is-invalid': 'is-valid'}|"
+          th:class="|form-control w-50 ${#fields.hasErrors('bankAccount.bankName')? 'is-invalid': 'is-valid'}|"
           type="text"
           th:field="*{bankAccount.bankName}"
           id="bankName"
@@ -150,7 +155,7 @@
 
           <label for="accountNumber">Bank Account Number</label>
           <input
-          th:class="|form-control ${#fields.hasErrors('bankAccount.accountNumber')? 'is-invalid': 'is-valid'}|"
+          th:class="|form-control w-50 ${#fields.hasErrors('bankAccount.accountNumber')? 'is-invalid': 'is-valid'}|"
           type="text"
           th:field="*{bankAccount.accountNumber}"
           id="accountNumber"
@@ -164,7 +169,7 @@
        <!-- bank account -->
       <div class="mb-3">
         <label for="formFile" class="form-label">Upload photo</label>
-        <input class="form-control" type="file" name="image" accept="image/png, image/jpeg" id="formFile">
+        <input class="form-control w-50" type="file" name="image" accept="image/png, image/jpeg" id="formFile">
     </div>
         <div>
             <label for="description" class="form-label mt-2">Description</label>
@@ -178,13 +183,6 @@
 
         <button type="submit" class="btn btn-primary mt-2">Submit</button>
       </form>
-    </div>
-    <div class="col second-col">
-        <h1>UPDATE</h1>
-        <div>
-            <label for="description" class="form-label mt-2">Description</label>
-            <textarea class="form-control w-50" name="description" id="description" rows="6" placeholder="write the helps the child got here..."></textarea>
-        </div>
     </div>
     </div>
     </div>
@@ -203,9 +201,10 @@
         <li class="nav-item" ><a href="#" class="fa fa-instagram"></a></li>
     </ul>
     <p class="text-white">&copy; 2022 Allright Reserved.</p>
-    <a href="#" class="bottom-0 p-5">
-        <i class="bi bi-arrow-up-circle h1"></i>
-    </a>
+      <!-- for Admin -->
+      <li sec:authorize="hasRole('ADMIN')" class="nav-item"><a class="nav-link" th:href="@{/admin}">Dashboard</a></li>
+      <!-- for Admin -->
+      <div><a href="#" class="bottom-0 p-5"><i class="bi bi-arrow-up-circle h1"></i></a></div>
   </footer>
   </body>
 </html>
