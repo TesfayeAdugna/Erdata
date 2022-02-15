@@ -45,9 +45,10 @@
         <li class="nav-item" ><a href="#" class="fa fa-instagram"></a></li>
     </ul>
     <p class="text-white">&copy; 2022 Allright Reserved.</p>
-    <a href="#" class="bottom-0 p-5">
-        <i class="bi bi-arrow-up-circle h1"></i>
-    </a>
+          <!-- for Admin -->
+          <li sec:authorize="hasRole('ADMIN')" class="nav-item"><a class="nav-link" th:href="@{/admin}">Dashboard</a></li>
+          <!-- for Admin -->
+          <div><a href="#" class="bottom-0 p-5"><i class="bi bi-arrow-up-circle h1"></i></a></div>
   </footer>
 </body>
 </html>
