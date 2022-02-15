@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="shortcut icon" type="image/png" th:href="@{/images/handheart.png}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Children list</title>
 </head>
 <body>
     <header class="header">
@@ -37,9 +38,9 @@
       <nav class="navbar navbar-light">
         <div class="container-fluid">
               <a class="navbar-brand"></a>
-              <form class="d-flex" style="margin-top:2%; padding-right:5em">
-              <input class="form-control me-2" type="text" name = "keyword" placeholder="Search by Name" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <form class="d-flex" th:action="@{/search}" method="get" style="margin-top:2%; padding-right:5em">
+                <input class="form-control me-2 w-10" type="search" name="keyword" th:value="${keyword}" placeholder="Search by Name" aria-label="Search" />
+                <button class="btn btn-outline-success text-dark" type="submit">Search</button>
               </form>
           </div>
       </nav>
