@@ -86,7 +86,7 @@ a{
     text-align: center;
 }
 .about h1{
-    color: red;
+    color: coral;
 }
 .b2{
     background-color: rgba(0, 0, 0, 0.8);
@@ -98,7 +98,7 @@ a{
 }
 .about-page{
     width: 40%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
     margin: 0 auto 1em 15%;
     padding: 3em;
@@ -106,7 +106,7 @@ a{
 }
 .about-page2{
     width: 40%;
-    background-image: linear-gradient(180deg, rgb(238, 11, 105), rgba(109, 107, 2, 0.274));
+    background-image: linear-gradient(180deg, coral,black);
     color: white;
     margin: 0 15% 1em auto;
     padding: 3em;
@@ -114,7 +114,7 @@ a{
 }
 .about-page3{
     width: 40%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
     margin: 0 auto 1em 15%;
     padding: 3em;
@@ -122,7 +122,7 @@ a{
 }
 .about-page4{
     width: 40%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
     margin: 0 15% 1em auto;
     padding: 3em;
@@ -130,7 +130,7 @@ a{
 }
 .about-page5{
     width: 40%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
     margin: 0 auto 1em 15%;
     padding: 3em;
@@ -144,7 +144,7 @@ a{
 }
 .donateach-page{
     width: 30%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
     margin: 0 auto 1em 10%;
     padding: 3em;
@@ -152,23 +152,23 @@ a{
 }
 .donateach-page1{
     width: 30%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
-    margin: 0 auto 1em 30%;
+    margin: 0 auto 1em 34%;
     padding: 3em;
     font-size: larger;
 }
 .donateach-page2{
     width: 30%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
-    margin: 0 auto 1em 45%;
+    margin: 0 auto 1em 34%;
     padding: 3em;
     font-size: larger;
 }
 .donateach-page3{
     width: 40%;
-    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    background-image: linear-gradient(180deg, coral, black);
     color: white;
     margin: 0 auto 1em 30%;
     padding: 3em;
@@ -180,10 +180,12 @@ a{
     width: 100%;
 }
 .organization{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 80%;
     text-align: center;
     margin: auto;
-    background-image: linear-gradient(150deg, red, rgba(66, 66, 8, 0.335));
+    background-image: linear-gradient(150deg, coral, black);
 }
 /*donateach page*/
 /*for profile page*/
