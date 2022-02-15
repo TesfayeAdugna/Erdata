@@ -92,7 +92,7 @@
 
 
   <div class="container">
-    <h1>Suggested children List</h1>
+    <p>Suggested children List</p>
     <table class="table">
       <thead>
         <tr>
@@ -120,6 +120,44 @@
       </tbody>
     </table>
   </div>
+
+
+
+
+  <div class="container">
+    <p>List of Users!</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">User name</th>
+          <th scope="col">Fitsr Name</th>
+          <th scope="col">last Name</th>
+          <th scope="col">Email </th>
+          <th scope="col">Role</th>
+          <th scope="col">Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="user: ${userlist}">
+          <td th:text="${user.id}">id</td>
+          <td  th:text="${user.username}">suggested by</td>
+          <td th:text="${user.firstName}">name</td>
+          <td th:text="${user.lastName}">Gender</td>
+          <td th:text="${user.email}">Suggested Date</td>
+          <td th:text="${user.role}">birth day</td>
+          <td th:text="${user.phone}">Description</td>
+          <td><a th:href="@{'/cancel/'+ ${user.id}}" class="btn btn-danger btn-xs bg-red">Delete</a></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
 
   <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
   <footer class="py-3 bg-black text-center">

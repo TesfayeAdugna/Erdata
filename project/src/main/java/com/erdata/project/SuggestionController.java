@@ -1,10 +1,12 @@
 package com.erdata.project;
-
+import java.util.Optional;
 import java.util.List;
 
 import javax.validation.Valid;
 
 import com.erdata.project.Security.User;
+
+import com.erdata.project.Security.UserRepository;
 
 import org.springframework.validation.Errors;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +26,8 @@ public class SuggestionController{
  
     @Autowired
     private SuggestionRepository repo;
-
-
+    @Autowired
+    private UserRepository userRepository;
     @Autowired
     private ChildrenService services;
 
@@ -37,6 +39,9 @@ public class SuggestionController{
 
         List<Children> listentry = services.listAll();
         model.addAttribute("listentry", listentry);
+
+        List<User> user=(List<User>)userRepository.findAll();
+        model.addAttribute("userlist", user);
 
         System.out.print("Get /");
         return "admin";
@@ -62,6 +67,13 @@ public class SuggestionController{
         Suggestion suggest = repo.findById(id).get();
           
         repo.delete(suggest);
+        return "redirect:/admin";
+    }
+    
+    @GetMapping("/cancel/{id}")
+    public String eraseUser(@PathVariable("id") long id, Model model) {
+        User user = userRepository.findById(id).get();
+        userRepository.delete(user);
         return "redirect:/admin";
     }
 
