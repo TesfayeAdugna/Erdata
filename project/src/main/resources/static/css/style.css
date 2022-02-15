@@ -77,6 +77,7 @@ a{
 }
 .child{
     padding: 3em;
+    margin: 1em;
 }
 /*for home page body*/
 /*for about page body*/
@@ -136,13 +137,64 @@ a{
     font-size: larger;
 }
 /*about page*/
+/*donateach page*/
+.donateach-bank-info h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.donateach-page{
+    width: 30%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 auto 1em 10%;
+    padding: 3em;
+    font-size: larger;
+}
+.donateach-page1{
+    width: 30%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 auto 1em 30%;
+    padding: 3em;
+    font-size: larger;
+}
+.donateach-page2{
+    width: 30%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 auto 1em 45%;
+    padding: 3em;
+    font-size: larger;
+}
+.donateach-page3{
+    width: 40%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 114), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 auto 1em 30%;
+    padding: 3em;
+    font-size: larger;
+}
+.donateach-page3 img{
+    background-color: white;
+    padding: 1em;
+    width: 100%;
+}
+.organization{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    background-image: linear-gradient(150deg, red, rgba(66, 66, 8, 0.335));
+}
+/*donateach page*/
 /*for profile page*/
 .profile-body-element{
-    padding-right: 5em;
+    padding: 0;
+    margin-right: 2em;
+    margin-left: 2em;
 }
 .child-profile{
-    margin-top: 10em;
-    padding: 3em;
+    width: 80%;
+    padding: 1em;
 }
 /*for profile page body*/
 /*for newentry body*/

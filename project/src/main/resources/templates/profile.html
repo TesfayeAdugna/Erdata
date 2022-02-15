@@ -41,9 +41,9 @@
           </div>
       </nav>
 
-          <div class="row row-cols-3 profile-body-element">
+          <div class="row row-cols-4 profile-body-element">
             <div class="col" th:each="entry : ${listentry}">
-            <div class="child" style="width: 36rem;">
+            <div class="child-profile" style="width: 20rem;">
               <img th:src="@{${entry.photosImagePath}}" class="card-img-top" alt="child image">
               <div class="card-body">
                 <p class="card-text"> <span>Name: </span><span th:text="${entry.firstName}"> </span> <span  th:text="${entry.middleName}"></span> </p>
@@ -51,7 +51,9 @@
                 <p class="card-text"> <span>Address: </span><span th:text="${entry.address.city}"></span> </p>
                 <a class="btn btn-outline-info" th:href="@{'/seemore/'+ ${entry.id}}" role="button">See more...</a>
         </div>
-
+        </div>
+        </div>
+        </div>
       <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
       <footer class="py-3 bg-black text-center">
         <ul class="nav justify-content-center font-weight-bold">
