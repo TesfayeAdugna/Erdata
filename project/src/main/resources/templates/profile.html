@@ -24,7 +24,10 @@
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional active" th:href="@{/profile}">Children list</a></li>
           <li class="nav-item" ><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></li>
-          
+          <a sec:authorize="! isAuthenticated()" th:href="@{/login}" type="button" class="btn btn-outline-warning" >Login</a>
+        <form class="nav-item" method="POST" th:action="@{/logout}">
+          <input class="btn btn-outline-warning" sec:authorize="isAuthenticated()" type="submit" value="Logout"/>
+        </form>
       </div>
       
         </ul>
