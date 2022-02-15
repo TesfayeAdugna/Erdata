@@ -97,7 +97,7 @@ public String deleteChildren(@PathVariable("id") long id, Model model) {
      }else {
      List<Children> listentry = service.listAll();
      model.addAttribute("listentry", listentry);}
-     return "home";
+     return "profile";
     }
 
 
