@@ -25,6 +25,7 @@ public class Children extends Person{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+    @NotEmpty(message = "you have to provide the child's birth date!")
     private String birthdate;
     @Column(nullable = true, length = 64)
     private String photos;
