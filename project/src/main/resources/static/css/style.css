@@ -287,23 +287,33 @@ caption{
 .nav__dropdown__button{
     background-color: rgb(2, 2, 2);
     margin: 5px;
+    border-radius: 10px;
 }
 .nav__dropdown__button__butn{
     width: 30px;
     height: 3px;
-    margin: 6px 0px;
+    margin: 6% ;
     background-color: coral;
 }
 .nav__dropdown__dropL__droplist{
     margin: 3px;
 }
 .nav__dropdown__dropL__droplist:hover{
-    border-bottom:2px solid rgb(221, 197, 169) ;
+    
 }
 /*see more*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     .nav-item{
         display: none;
+    }
+    .nav-item-additional:hover{
+        transition-duration: 200ms;
+        transform-origin: 0em;
+        color: rgb(252, 252, 252);
+        border-bottom: 0px solid rgb(3, 3, 3);
+        border-top: 0px solid rgb(7, 7, 7);
+        
+        height: 4em;
     }
     a{
         text-decoration: none;
@@ -319,6 +329,7 @@ caption{
     .nav__dropdown:hover .nav__dropdown__dropL {
         display: block;
         background-color: black;
+        border-radius: 10px;
 
     }
   }
