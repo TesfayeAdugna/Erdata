@@ -53,7 +53,7 @@ public class ChildrenController {
 
         FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
         service.save(entry);
-        return "redirect:/";
+        return "redirect:/admin";
     }
     
     

@@ -1,6 +1,8 @@
 package com.erdata.project;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,8 @@ public class seemoreController {
     public String displayseemore(@PathVariable(name = "id") Long id, Model model){
         Children listentry = service.get(id);
         model.addAttribute("listentry", listentry);
+        List<Children> childs = service.listAll();
+        model.addAttribute("listOfChild", childs);
         return "seemore";
     }
 }

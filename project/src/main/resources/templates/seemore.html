@@ -28,44 +28,67 @@
       </nav>
   <div class="b2">
   </header>
+  <section class="nav__dropdown">
+    <div class="nav__dropdown__button">
+        <div class="nav__dropdown__button__butn"></div>
+        <div class="nav__dropdown__button__butn"></div>
+        <div class="nav__dropdown__button__butn"></div>
+    </div>
+    <div class="nav__dropdown__dropL">
+        <div class="nav__dropdown__dropL__droplist"><a class="navbar-brand nav-item-additional " th:href="@{/}" >Home</a></div>
+        <div class="nav__dropdown__dropL__droplist"><a class="navbar-brand nav-item-additional" th:href="@{/donate}">Donate</a></div>
+        <div class="nav__dropdown__dropL__droplist"><a class="navbar-brand nav-item-additional" th:href="@{/about}">About</a></div>
+        <div class="nav__dropdown__dropL__droplist"><a class="navbar-brand nav-item-additional" th:href="@{/profile}">Children list</a></div>
+        <div class="nav__dropdown__dropL__droplist"><a class="navbar-brand nav-item-additional" th:href="@{/suggestion}">Suggest</a></div>
+        
+    </div>
+</section>
 
 
-      <div class="row">
-          <div class="col-4">
-            <div class="row child">
-              <div class="col" th:each="entry : ${listentry}">
-                <div class="mb-3 pb-4">
-                <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%">
-                <div class="card-body">
-                  <p class="card-text"> <span>Name: </span><span th:text="${entry.firstName}"> </span> <span  th:text="${entry.middleName}"></span> </p>
-                  <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
-                  <p class="card-text"> <span>Address: </span><span th:text="${entry.address.city}"></span> </p>
-                  <a class="btn btn-outline-info" th:href="@{'/donateach/'+ ${entry.id}}" role="button">Donate</a>
-                </div>
-              </div>
-              </div>
-              </div>
-          </div>
-          <div class="col-8">
-            <div class="row">
-            <div class="col children-image" style="width: 90%;">
-              <img th:src="@{${listentry.photosImagePath}}" class="card-img-top" alt="child image">
-            </div>
-            <div class="col children-description">
-              <p class="card-text"> <span  th:text="${listentry.firstName}"></span> <span  th:text="${listentry.middleName}"></span> is born on <span th:text="${listentry.birthdate}"></span> at <span th:text="${listentry.address.city}"></span>. <br /> <span th:text="${listentry.description}"></span> </p>
+  <div class="row">
+    <div class="col-4">
+      <div class="row child fled-box">
+        <div class="col" th:each="child : ${listOfChild}">
+      <a class="eachlist" th:href="@{'/seemore/'+ ${child.id}}" >
+          <div class="mb-3 pb-4 onechild" >
+            <img th:src="@{${child.photosImagePath}}" alt="child image" width="100%">
+            <div class="card-body">
+              <p class="card-text"> <span>Name: </span><span th:text="${child.firstName}"> </span> <span
+                  th:text="${child.middleName}"></span> </p>
+              <p class="card-text"> <span>Birthdate: </span><span th:text="${child.birthdate}"></span> </p>
+              <p class="card-text"> <span>Address: </span><span th:text="${child.address.city}"></span> </p>
             </div>
           </div>
-          <div class="row qoutes">
-            <div class="quote">
-            <h2>"If you want others to be happy, practice Compassion <br> If you want to be happy practice Compassion." -Dalai Lama</h2>
-          </div>
-          <div class="seemore-quote">
-            <h1 class="seemore-erdata">Erdata</h1>
-          </div>
-          </div>
-          </div>
+        </a>
+        </div>
       </div>
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col children-image" style="width: 90%;">
+          <img th:src="@{${listentry.photosImagePath}}" class="card-img-top" alt="child image">
+        </div>
+        <div class="col children-description">
+          <p class="card-text"> <span th:text="${listentry.firstName}"></span> <span
+              th:text="${listentry.middleName}"></span> is born on <span th:text="${listentry.birthdate}"></span> at
+            <span th:text="${listentry.address.city}"></span>. <br /> <span th:text="${listentry.description}"></span>
+          </p>
+        </div>
+      </div>
+      <div class="row qoutes">
+        <div class="quote">
+          <h2>"If you want others to be happy, practice Compassion <br> If you want to be happy practice Compassion."
+            -Dalai Lama</h2>
+        </div>
+        <div class="seemore-quote">
+          <h1 class="seemore-erdata">Erdata</h1>
+          <a class="btn btn-outline-info" th:href="@{'/donateach/'+ ${listentry.id}}" role="button">Donate</a>
 
+        </div>
+
+      </div>
+    </div>
+  </div>
 
       <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
       <footer class="py-3 bg-black text-center">
