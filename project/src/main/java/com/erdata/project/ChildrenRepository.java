@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ChildrenRepository  extends JpaRepository<Children, Long> {
     // for search
-    @Query(value = "select * from Children i where i.firstname like %:keyword% or i.middlename like %:keyword% or i.lastname like %:keyword% or i.lastname like %:keyword%", nativeQuery = true)
+    @Query(value = "select * from Children i where i.description like %:keyword% or i.birthdate like %:keyword%", nativeQuery = true)
     List<Children> findByKeyword(@Param("keyword") String keyword);
 }
