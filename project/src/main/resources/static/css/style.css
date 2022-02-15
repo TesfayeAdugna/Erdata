@@ -95,7 +95,47 @@ a{
     text-align: center;
     font-family: cursive;
 }
-
+.about-page{
+    width: 40%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 auto 1em 15%;
+    padding: 3em;
+    font-size: larger;
+}
+.about-page2{
+    width: 40%;
+    background-image: linear-gradient(180deg, rgb(238, 11, 105), rgba(109, 107, 2, 0.274));
+    color: white;
+    margin: 0 15% 1em auto;
+    padding: 3em;
+    font-size: larger;
+}
+.about-page3{
+    width: 40%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 auto 1em 15%;
+    padding: 3em;
+    font-size: larger;
+}
+.about-page4{
+    width: 40%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 15% 1em auto;
+    padding: 3em;
+    font-size: larger;
+}
+.about-page5{
+    width: 40%;
+    background-image: linear-gradient(180deg, rgb(233, 90, 197), rgba(15, 115, 161, 0.411));
+    color: white;
+    margin: 0 auto 1em 15%;
+    padding: 3em;
+    font-size: larger;
+}
+/*about page*/
 /*for profile page*/
 .profile-body-element{
     padding-right: 5em;
