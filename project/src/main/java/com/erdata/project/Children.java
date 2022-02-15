@@ -44,7 +44,3 @@ public class Children extends Person{
         return "/user-photos/" + id + "/" + photos;
     }
 }
-
-// @NotEmpty(message="Address is required")
-    // private String address;
-    // private String bankaccount;

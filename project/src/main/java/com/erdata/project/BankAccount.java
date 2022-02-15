@@ -9,5 +9,4 @@ import lombok.Data;
 public class BankAccount{
     private String bankName;
     private String accountNumber;
-    // private String qrCodePhoto;
 }

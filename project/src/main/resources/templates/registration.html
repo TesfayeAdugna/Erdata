@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <title>Erdata Registration page</title>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
@@ -130,9 +131,8 @@
                 th:if="${#fields.hasErrors('phone')}"
                 th:errors="*{phone}">
         </div><br>
-
         <!-- sgfhsgjfgsf -->
-<!--
+
         <label for="house-number">House Number</label>
         <input
                 th:class="|form-control ${#fields.hasErrors('address.houseNumber')? 'is-invalid': 'is-valid'}|"
@@ -203,9 +203,9 @@
                 th:errors="*{address.country}">
         </div><br>
       -->
-        <!-- hh -->
+         <!-- hh
 
-        <!-- fgjseghdrghdg -->
+        fgjseghdrghdg  -->
 
         <input class="btn btn-primary my-2" type="submit" value="Register" />
     </form>

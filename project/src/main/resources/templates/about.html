@@ -1,6 +1,7 @@
-<!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
   <head>
     <title>About page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -85,6 +86,12 @@
         <li class="nav-item" ><a href="#" class="fa fa-instagram"></a></li>
     </ul>
     <p class="text-white">&copy; 2022 Allright Reserved.</p>
+    <!-- <li class="nav-item"> -->
+
+     <!-- for Admin -->
+     <li sec:authorize="hasRole('ADMIN')" class="nav-item"><a class="nav-link" th:href="@{/getmessage}">Admin</a></li>
+     <!-- for Admin --> <!-- </li> -->
+     
     <a href="#" class="bottom-0 p-5">
         <i class="bi bi-arrow-up-circle h1"></i>
     </a>

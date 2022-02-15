@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
   <head>
     <title>Child Entry page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -87,7 +87,7 @@
         </div>
 
         <!-- Address -->
-        <!-- <label for="kebele">Kebele</label>
+        <label for="kebele">Kebele</label>
         <input
         th:class="|form-control ${#fields.hasErrors('address.kebele')? 'is-invalid': 'is-valid'}|"
         type="text"
@@ -127,7 +127,7 @@
         class="invalid-feedback"
         th:if="${#fields.hasErrors('address.region')}"
         th:errors="*{address.region}">
-    </div><br> -->
+    </div><br>
           <!-- Address -->
 
           <!-- bank account -->
