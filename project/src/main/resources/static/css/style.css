@@ -278,4 +278,47 @@ footer{
     width: 30%;
     float: right;
 }
+.nav__dropdown{
+    display: none;
+}
+caption{
+    margin-bottom: 5px;
+}
+.nav__dropdown__button{
+    background-color: rgb(2, 2, 2);
+    margin: 5px;
+}
+.nav__dropdown__button__butn{
+    width: 30px;
+    height: 3px;
+    margin: 6px 0px;
+    background-color: coral;
+}
+.nav__dropdown__dropL__droplist{
+    margin: 3px;
+}
+.nav__dropdown__dropL__droplist:hover{
+    border-bottom:2px solid rgb(221, 197, 169) ;
+}
 /*see more*/
+@media only screen and (max-width: 700px) {
+    .nav-item{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav__dropdown__dropL{
+        display: none;
+    }
+    .nav__dropdown{
+        display: flex;
+        flex-direction: column;
+        margin-left: 83%;
+    }
+    .nav__dropdown:hover .nav__dropdown__dropL {
+        display: block;
+        background-color: black;
+
+    }
+  }
