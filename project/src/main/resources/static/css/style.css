@@ -337,6 +337,16 @@ padding: 0;
     margin: 0 0 6px 0;
 }
 @media only screen and (max-width: 800px) {
+    #myFlex{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+
+    }
+    #myWidth{
+        width: 100%;
+    }
     .nav-item{
         display: none;
     }

@@ -109,7 +109,7 @@
               let us give them strength because they will be our 
               strength when we are tired <br>
               let us give them love because they are our children!
-                 <br><br>you can get children lists <a href="">here</a>.   
+                 <br><br>you can get children lists <a th:href="@{/profile}">here</a>.   
           </p>
         </div>
         <div class="col" style="padding-top:8%;  ">
@@ -122,10 +122,10 @@
           />
         </div>
       </div>
-      <div class="row row-cols-3 child">
-      <div class="col" th:each="entry : ${listentry}">
+      <div class="row row-cols-3 child" id="myFlex">
+      <div id="myWidth" class="col" th:each="entry : ${listentry}">
         <div class="mb-3 pb-4">
-        <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%" height="250rem">
+        <img th:src="@{${entry.photosImagePath}}" alt="child image" width="100%" height="290rem">
         <div class="card-body">
           <p class="card-text"> <span>Name: </span><span th:text="${entry.firstName}"> </span> <span  th:text="${entry.middleName}"></span> </p>
           <p class="card-text"> <span>Birthdate: </span><span th:text="${entry.birthdate}"></span> </p>
