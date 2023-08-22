@@ -1,7 +1,7 @@
 <h1>Homeless Children's Aid Web Application</h1>
 Homeless Children's Aid
 
-<p>Welcome to the Homeless Children's Aid Web Application repository! This project aims to provide assistance and support to homeless children by leveraging the power of technology and community engagement. This README will guide you through the setup, features, and usage of the application.</p>
+<p>Welcome to the Homeless Children's Aid Web Application repository! This project aims to provide assistance and support to homeless children by leveraging the power of technology and community engagement. This README will guide you through the features and usage of the application.</p>
 
 <h3>Project Overview</h3>
 <p>Homeless Children's Aid is a web application designed to address the needs of homeless children in our community. It provides a platform for users to:
@@ -16,5 +16,5 @@ Awareness Campaigns: The platform facilitates awareness campaigns to spread info
 <li>Secure payment gateway integration for smooth and safe donations.</li>
 <li>User authentication and profiles for volunteers, enabling efficient communication and coordination.</li>
 <li>Interactive map displaying the locations of shelters, food distribution centers, and other critical resources.</li>
-<li>Blog section to share success stories, news, and educational content related to homeless children.<li>
-<li>Events calendar showcasing upcoming volunteer opportunities, fundraisers, and awareness campaigns.<li>
+<li>Blog section to share success stories, news, and educational content related to homeless children.</li>
+<li>Events calendar showcasing upcoming volunteer opportunities, fundraisers, and awareness campaigns.</li>
